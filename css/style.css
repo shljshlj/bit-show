@@ -1,7 +1,106 @@
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-dark: #345987;
+  --primary-text: #050505;
+  --secondary-text: #f1f1f1;
+  --primary-icon: #7e7e7e;
+}
+
+.site-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+}
+
+.content-container {
+  width: 50rem;
+  max-width: 95vw;
+  margin: 0 auto;
+}
+
+.site-header,
+.site-footer {
+  background-color: var(--bg-dark);
+  padding: 20px 0;
+  color: var(--secondary-text);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Search Form */
+
+.form-container {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.search-input {
+  padding: 8px;
+  border: none;
+  font-size: 16px;
+}
+
+.search-input:focus,
+.search-button:focus {
+  outline: none;
+}
+
+.search-button {
+  border: none;
+  background-color: transparent;
+  color: var(--primary-icon);
+  padding: 8px;
+  font-size: 16px;
+}
+
+/* -----
+SVG Icons - svgicons.sparkk.fr
+----- */
+
+.svg-icon {
+  width: 1em;
+  height: 1em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: var(--primary-icon);
+}
+
+.svg-icon circle {
+  stroke: var(--primary-icon);
+  stroke-width: 1;
+}
+
+/* -----
+SVG Icons - END
+----- */
+
+/* api-provider-logo */
+
+.api-provider {
+  display: flex;
+  flex-direction: column;
+}
+
+.api-provider-logo svg {
+  width: 100px;
 }
