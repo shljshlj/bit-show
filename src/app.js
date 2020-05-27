@@ -1,5 +1,3 @@
-import { api_key } from './data.js';
-
 import './scss/main.scss';
 
 const form = document.querySelector('.search-form');
@@ -9,7 +7,6 @@ function init() {
   searchButton.addEventListener('click', (e) => e.preventDefault());
 
   console.log('init');
-  console.log(api_key);
 }
 
 // Init app
