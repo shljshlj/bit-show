@@ -1,3 +1,8 @@
+@import 'section';
+
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Montserrat', sans-serif;
+
 *,
 *::after,
 *::before {
@@ -13,6 +18,20 @@
   --primary-icon: #7e7e7e;
 }
 
+body {
+  font-family: $font-primary;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-secondary;
+}
+
+img {
+  display: block;
+}
+
 .site-container {
   display: flex;
   flex-direction: column;
@@ -21,15 +40,22 @@
 
 .main-content {
   flex-grow: 1;
+  background-color: #fdfdfd;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container {
+  width: 60rem;
+  max-width: 95vw;
+  margin: 0 auto;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
-  width: 70rem;
-  max-width: 95vw;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
 }
 
 .site-header,

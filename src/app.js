@@ -1,3 +1,5 @@
+import { getShows } from './data';
+
 import './scss/main.scss';
 
 const form = document.querySelector('.search-form');
@@ -7,6 +9,7 @@ function init() {
   searchButton.addEventListener('click', (e) => e.preventDefault());
 
   console.log('init');
+  getShows();
 }
 
 // Init app
