@@ -1,16 +1,17 @@
-import { getShows } from './data';
+import { getMovies } from './data';
+import * as ui from './ui';
 
 import './scss/main.scss';
 
-const form = document.querySelector('.search-form');
-const searchButton = document.querySelector('.search-button');
 
 function init() {
-  searchButton.addEventListener('click', (e) => e.preventDefault());
-
-  console.log('init');
-  getShows();
+  getMovies(onSuccessHomePage);
 }
+
+function onSuccessHomePage(movies) {
+  ui.displayMoviesPopular(movies);
+}
+
 
 // Init app
 document.addEventListener('DOMContentLoaded', function (event) {
