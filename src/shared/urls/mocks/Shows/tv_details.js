@@ -19,7 +19,7 @@ const tv_details =
       "profile_path": "/wYApP38aXe6ZcEtlBAfNRxJTQQi.jpg"
     }
   ],
-  "episode_run_time": [
+  "episode_run_time": [ // in minutes
     22
   ],
   "first_air_date": "2013-12-02",

@@ -12,7 +12,7 @@ export class Movie {
     this.tagline = tagline;
     this.overview = overview;
     this.homepage = homepage;
-    this.imdbUrl = `${IDMB_URL}${imdb_id}`
+    this.imdbUrl = `${IDMB_URL}${imdb_id}`;
     this.original_language = original_language;
     this.spoken_languages = spoken_languages;
     this.posterUrl = {

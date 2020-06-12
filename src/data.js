@@ -1,20 +1,13 @@
-import { MOVIES_POPULAR } from './shared/constants';
-// import { Movie } from './entites/Movie';
+import { movieService } from './services/MovieServices';
+import { showService } from './services/ShowService';
 
-function getMovies(onSuccess) {
-  fetch(MOVIES_POPULAR)
-    .then(function (response) {
-      return response.json()
-    })
-    .then(function (json) {
-      const moviesPopular = json.results.slice(0, 4);
-      onSuccess(moviesPopular);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+async function getPopularMoviesAndShows(onSuccess) {
+  const movies = await movieService.fetchPopular();
+  const shows = await showService.fetchPopular();
+
+  onSuccess(movies, shows);
 }
 
 export {
-  getMovies
+  getPopularMoviesAndShows
 };
