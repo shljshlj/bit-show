@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
   console.log('Init app');
   console.log(window.location.pathname)
 
-  if (window.location.pathname === '/index.html') {
+  if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
     initHomePage();
   }
 
