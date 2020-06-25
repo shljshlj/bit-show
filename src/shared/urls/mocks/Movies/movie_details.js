@@ -1,4 +1,4 @@
-// https://api.themoviedb.org/3/movie/419704?api_key=${api_key}&language=en-US&append_to_response=videos
+// https://api.themoviedb.org/3/movie/${movie_id}?api_key=${api_key}&language=en-US&append_to_response=videos
 
 const movie_details =
 {

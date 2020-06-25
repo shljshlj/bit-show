@@ -16,34 +16,13 @@ const tv_recommendations =
       "origin_country": [
         "US"
       ],
-      "original_language": "en",
       "original_name": "Futurama",
       "overview": "The adventures of a late-20th-century New York City pizza delivery boy, Philip J. Fry, who, after being unwittingly cryogenically frozen for one thousand years, finds employment at Planet Express, an interplanetary delivery company in the retro-futuristic 31st century.",
       "poster_path": "/eyvvM4NCK7N6WAS9vxfHPpVwia1.jpg",
       "vote_average": 8.2,
-      "vote_count": 1097,
-      "networks": [
-        {
-          "id": 19,
-          "logo": {
-            "path": "/1DSpHrWyOORkL9N2QHX7Adt31mQ.png",
-            "aspect_ratio": 2.325581395348837
-          },
-          "name": "FOX",
-          "origin_country": "US"
-        },
-        {
-          "id": 47,
-          "logo": {
-            "path": "/6ooPjtXufjsoskdJqj6pxuvHEno.png",
-            "aspect_ratio": 2.905569007263923
-          },
-          "name": "Comedy Central",
-          "origin_country": "US"
-        }
-      ],
-      "popularity": 32.036
     },
+
+
     {
       "backdrop_path": "/p39K75uoZLwnhGlEAJxRG5xAD9y.jpg",
       "first_air_date": "2011-12-04",
@@ -84,6 +63,7 @@ const tv_recommendations =
       ],
       "popularity": 39.473
     },
+
     {
       "backdrop_path": "/81BCTObfPk0EvarJpUgnGXHvM9x.jpg",
       "first_air_date": "2014-08-22",
@@ -116,6 +96,7 @@ const tv_recommendations =
       ],
       "popularity": 29.448
     },
+
     {
       "backdrop_path": "/pjdOSa7Qh3cfs5Od7s7h4yaiRqD.jpg",
       "first_air_date": "1997-08-13",
@@ -147,6 +128,7 @@ const tv_recommendations =
       ],
       "popularity": 52.832
     },
+
     {
       "backdrop_path": "/c2KqUoOjfjZsC3DWr1FFERK8FWN.jpg",
       "first_air_date": "2009-09-17",

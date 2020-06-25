@@ -6,7 +6,7 @@ export default class PreviewItem {
     this.id = id;
     this.title = name;
     this.genres = genres;
-    this.voteRating = vote_average;
+    this.rating = vote_average;
     this.releaseDate = new Date(release_date);
     this.posterUrl = `${POSTER_PATH_M}${poster_path}`;
   }

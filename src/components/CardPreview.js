@@ -1,5 +1,5 @@
 export const cardPreview = (item) => {
-  const { type, id, title, voteRating, posterUrl } = item;
+  const { type, id, title, rating, posterUrl } = item;
   const releaseYear = item.getReleaseYear();
   const genres = item.getGenresFormat();
 
@@ -14,7 +14,7 @@ export const cardPreview = (item) => {
       </div>
       <div class="card-content">
         <header class="card-header">
-          <div class="card-rating">${voteRating}</div>
+          <div class="card-rating">${rating}</div>
           <h2 class="card-title">${title}</h2>
         </header>
         <div class="card-content-expanded">
