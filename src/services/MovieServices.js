@@ -9,26 +9,40 @@ class MovieService {
       params: {
         page,
         language,
-        api_key: API_KEY
-      }
+        api_key: API_KEY,
+      },
     };
 
     const { data } = await movieApi.get('/popular', options);
-    const genreRes = await genreService.fetchGenres('movie');
 
-    const movies = data.results.slice(0, numOfMovies);
-    const moviePreviews = movies.map(movie => {
-      const { id, title, genre_ids, vote_average, release_date, poster_path } = movie;
+    return data.results.slice(0, numOfMovies);
+  }
 
-      const genres = [];
-      genre_ids.forEach(id => {
-        genres.push(genreRes.filter(genre => genre.id === id)[0].name);
-      });
+  async createMoviePreviews(fetchedMovies) {
+    const allGenres = await genreService.fetchAllGenres('movie');
 
-      return new PreviewItem('movie', id, title, genres, vote_average, release_date, poster_path);
+    return fetchedMovies.map((movie) => {
+      const {
+        id,
+        title,
+        genre_ids,
+        vote_average,
+        release_date,
+        poster_path,
+      } = movie;
+
+      const genres = genreService.findGenres(allGenres, genre_ids);
+
+      return new PreviewItem(
+        'movie',
+        id,
+        title,
+        genres,
+        vote_average,
+        release_date,
+        poster_path
+      );
     });
-
-    return moviePreviews;
   }
 }
 

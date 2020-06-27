@@ -1,6 +1,5 @@
 import { cardPreview } from './components/CardPreview';
 
-
 function displayPreview(items, container) {
   items.forEach((item) => {
     // const { id, title, genres, vote_rating, release_year, posterUrl } = item;
@@ -9,6 +8,4 @@ function displayPreview(items, container) {
   });
 }
 
-export {
-  displayPreview
-};
+export { displayPreview };

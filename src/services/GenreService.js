@@ -1,12 +1,12 @@
 import API from '../shared/api';
 
 class GenreService {
-  async fetchGenres(typeOfContent = '', language = 'en-US') {
+  async fetchAllGenres(typeOfContent = '', language = 'en-US') {
     const options = {
       params: {
         language,
-        api_key: process.env.TMDB_API_KEY
-      }
+        api_key: process.env.TMDB_API_KEY,
+      },
     };
 
     let endpoint;
@@ -27,6 +27,10 @@ class GenreService {
     const { data } = await API.get(endpoint, options);
 
     return data.genres;
+  }
+
+  findGenres(allGenres, genreIds) {
+    return genreIds.map((id) => allGenres.find((el) => el.id === id));
   }
 }
 

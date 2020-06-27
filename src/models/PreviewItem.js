@@ -15,7 +15,14 @@ export default class PreviewItem {
     return this.releaseDate.getFullYear();
   }
 
-  getGenresFormat() {
-    return this.genres.join(' &bull; ');
+  getGenreNames() {
+    return this.genres.reduce((acc, cur) => {
+      return [...acc, cur.name];
+    }, []);
   }
-};
+
+  getGenresFormat() {
+    const genreNames = this.getGenreNames();
+    return genreNames.join(' &bull; ');
+  }
+}
