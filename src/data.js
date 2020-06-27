@@ -16,7 +16,7 @@ async function getSingleShow(id, onSuccess) {
 }
 
 async function getSingleMovie(id, onSuccess) {
-  const movie = await movieService.fetchDetails(id);
+  const movie = await movieService.fetchMovie(id);
 }
 
 export { getPopularMoviesAndShows, getSingleShow, getSingleMovie };

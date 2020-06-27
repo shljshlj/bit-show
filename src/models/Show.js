@@ -1,7 +1,7 @@
-import { POSTER_PATH_L } from "../shared/constants";
-import { POSTER_PATH_M } from "../shared/constants";
-import { POSTER_BACKDROP } from "../shared/constants";
-import { IDMB_URL } from "../shared/constants";
+import { POSTER_PATH_L } from '../shared/constants';
+import { POSTER_PATH_M } from '../shared/constants';
+import { POSTER_BACKDROP } from '../shared/constants';
+import { IDMB_URL } from '../shared/constants';
 
 export class Show {
   constructor(

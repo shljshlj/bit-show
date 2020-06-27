@@ -1,13 +1,23 @@
 import { POSTER_PATH_M } from '../shared/constants';
 
 export default class PreviewItem {
-  constructor(type, id, name, genres, vote_average, release_date, poster_path) {
+  constructor(
+    type,
+    id,
+    title,
+    releaseDate,
+    genres,
+    overview,
+    rating,
+    poster_path
+  ) {
     this.type = type;
     this.id = id;
-    this.title = name;
+    this.title = title;
+    this.releaseDate = new Date(releaseDate);
     this.genres = genres;
-    this.rating = vote_average;
-    this.releaseDate = new Date(release_date);
+    this.overview = overview;
+    this.rating = rating;
     this.posterUrl = `${POSTER_PATH_M}${poster_path}`;
   }
 
@@ -17,7 +27,8 @@ export default class PreviewItem {
 
   getGenreNames() {
     return this.genres.reduce((acc, cur) => {
-      return [...acc, cur.name];
+      if (cur) return [...acc, cur.name];
+      return acc;
     }, []);
   }
 

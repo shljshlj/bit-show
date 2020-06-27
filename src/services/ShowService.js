@@ -6,11 +6,10 @@ import PreviewItem from '../models/PreviewItem';
 import ExternalIds from '../models/ExternalIds';
 import Keywords from '../models/Keywords';
 import PreviewPerson from '../models/PreviewPerson';
-import PreviewRecommended from '../models/PreviewRecommended';
 import Show from '../models/Show';
 
 class ShowService {
-  async fetchPopular(page = 1, language = 'en-US', numOfShows = 4) {
+  async fetchPopular(numOfShows = 4, page = 1, language = 'en-US') {
     const options = {
       params: {
         page,
@@ -35,6 +34,7 @@ class ShowService {
         vote_average,
         first_air_date,
         poster_path,
+        overview,
       } = show;
 
       const genres = genreService.findGenres(allGenres, genre_ids);
@@ -43,9 +43,10 @@ class ShowService {
         'tv',
         id,
         name,
-        genres,
-        vote_average,
         first_air_date,
+        genres,
+        overview,
+        vote_average,
         poster_path
       );
     });
@@ -120,7 +121,6 @@ class ShowService {
     };
 
     const { data } = await tvApi.get(`/${id}/recommendations`, options);
-    console.log(data);
 
     return data.results;
   }
@@ -131,6 +131,9 @@ class ShowService {
     const externalIds = await this.fetchExternalIds(id, language);
     const keywords = await this.fetchKeywords(id, language);
     const recommended = await this.fetchRecommended(id, page, language);
+    const recommendedShows = await this.createShowPreviews(recommended);
+
+    console.log(recommendedShows);
 
     const tvId = details.id;
 
@@ -154,18 +157,6 @@ class ShowService {
       vote_average,
     } = details;
   }
-}
-
-async function createRecommended(fetchedRecommend) {
-  const {
-    first_air_date,
-    genre_ids,
-    id,
-    name,
-    overview,
-    poster_path,
-    vote_average,
-  } = fetchedRecommend;
 }
 
 export const showService = new ShowService();
