@@ -1,4 +1,5 @@
 @import 'section';
+@import 'pageHeader';
 
 $font-primary: 'Roboto', sans-serif;
 $font-secondary: 'Montserrat', sans-serif;
@@ -97,27 +98,36 @@ img {
   color: var(--primary-icon);
   padding: 8px;
   font-size: 16px;
+
+  .svg-icon {
+    width: 1em;
+    height: 1em;
+  }
+
+  .svg-icon path {
+    fill: var(--primary-icon);
+  }
 }
 
 /* -----
-SVG Icons - svgicons.sparkk.fr
+SVG Icons - svgicons.sparkk.fr SET #1
 ----- */
 
-.svg-icon {
-  width: 1em;
-  height: 1em;
-}
+// .svg-icon {
+//   width: 1em;
+//   height: 1em;
+// }
 
-.svg-icon path,
-.svg-icon polygon,
-.svg-icon rect {
-  fill: var(--primary-icon);
-}
+// .svg-icon path,
+// .svg-icon polygon,
+// .svg-icon rect {
+//   fill: var(--primary-icon);
+// }
 
-.svg-icon circle {
-  stroke: var(--primary-icon);
-  stroke-width: 1;
-}
+// .svg-icon circle {
+//   stroke: var(--primary-icon);
+//   stroke-width: 1;
+// }
 
 /* -----
 SVG Icons - END
@@ -130,6 +140,7 @@ SVG Icons - END
   flex-direction: column;
 }
 
-.api-provider-logo svg {
+.api-provider-logo img {
+  display: block;
   width: 100px;
 }

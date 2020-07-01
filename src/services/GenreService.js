@@ -1,11 +1,12 @@
 import API from '../shared/api';
+import { API_KEY } from '../shared/constants';
 
 class GenreService {
   async fetchAllGenres(typeOfContent = '', language = 'en-US') {
     const options = {
       params: {
         language,
-        api_key: process.env.TMDB_API_KEY,
+        api_key: API_KEY,
       },
     };
 

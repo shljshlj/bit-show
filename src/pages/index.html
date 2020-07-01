@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>BitShows</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="site-container">
+    <header class="site-header">
+      <div class="content-container header-container">
+        <h1>BitShow</h1>
+        <form class="search-form">
+          <div class="form-container">
+            <input class="search-input" name="search-shows" type="text" placeholder="Search shows" />
+            <button type="submit" class="search-button">
+              <!-- <i class="fas fa-search"></i> -->
+              <svg class="svg-icon" viewBox="0 0 20 20">
+                <path fill="none" d="M19.129,18.164l-4.518-4.52c1.152-1.373,1.852-3.143,1.852-5.077c0-4.361-3.535-7.896-7.896-7.896
+                  c-4.361,0-7.896,3.535-7.896,7.896s3.535,7.896,7.896,7.896c1.934,0,3.705-0.698,5.078-1.853l4.52,4.519
+                  c0.266,0.268,0.699,0.268,0.965,0C19.396,18.863,19.396,18.431,19.129,18.164z M8.567,15.028c-3.568,0-6.461-2.893-6.461-6.461
+                  s2.893-6.461,6.461-6.461c3.568,0,6.46,2.893,6.46,6.461S12.135,15.028,8.567,15.028z"></path>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </header>
+
+    <main class="main-content content-container">
+      <section class="main-content__section">
+        <header class="section-header">
+          <h1 class="section-header__title">Movies</h1>
+        </header>
+        <div class="grid-container movies-popular"></div>
+      </section>
+
+      <section class="main-content__section">
+        <header class="section-header">
+          <h1 class="section-header__title">Shows</h1>
+        </header>
+        <div class="grid-container shows-popular"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="content-container">
+        <div class="api-provider">
+          <span>Data provided by</span>
+          <a href="https://www.themoviedb.org/documentation/api" target="blank">
+            <span class="api-provider-logo">
+              <img src="../assets/tmdb.svg" />
+            </span>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+</body>
+
+</html>

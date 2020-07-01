@@ -1,7 +1,7 @@
 import { POSTER_PATH_L } from '../shared/constants';
 import { POSTER_PATH_M } from '../shared/constants';
 import { POSTER_BACKDROP } from '../shared/constants';
-import { IDMB_URL } from '../shared/constants';
+import { IMDB_URL } from '../shared/constants';
 
 export class Show {
   constructor(
@@ -28,7 +28,7 @@ export class Show {
     this.overview = overview;
     this.numOfEpisodes = number_of_episodes;
     this.numOfSeasons = number_of_seasons;
-    this.imdbUrl = `${IDMB_URL}${imdb_id}`;
+    this.imdbUrl = `${IMDB_URL}${imdb_id}`;
     this.original_language = original_language;
     this.keywords = keywords;
     this.posterUrl = {

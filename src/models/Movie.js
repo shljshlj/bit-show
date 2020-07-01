@@ -1,7 +1,7 @@
 import { POSTER_PATH_L } from '../shared/constants';
 import { POSTER_PATH_M } from '../shared/constants';
 import { POSTER_BACKDROP } from '../shared/constants';
-import { IDMB_URL } from '../shared/constants';
+import { IMDB_URL } from '../shared/constants';
 
 export class Movie {
   constructor(id, title, genres, runtime, tagline, overview, homepage, imdb_id, original_language, spoken_languages, poster_path, backdrop_path, status, release_date, videos) {
@@ -12,7 +12,7 @@ export class Movie {
     this.tagline = tagline;
     this.overview = overview;
     this.homepage = homepage;
-    this.imdbUrl = `${IDMB_URL}${imdb_id}`;
+    this.imdbUrl = `${IMDB_URL}${imdb_id}`;
     this.original_language = original_language;
     this.spoken_languages = spoken_languages;
     this.posterUrl = {
