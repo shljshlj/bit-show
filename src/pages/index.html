@@ -15,43 +15,61 @@
 <body>
   <div class="site-container">
     <header class="site-header">
-      <div class="content-container header-container">
-        <h1>BitShow</h1>
-        <form class="search-form">
-          <div class="form-container">
-            <input class="search-input" name="search-shows" type="text" placeholder="Search shows" />
-            <button type="submit" class="search-button">
-              <!-- <i class="fas fa-search"></i> -->
-              <svg class="svg-icon" viewBox="0 0 20 20">
-                <path fill="none" d="M19.129,18.164l-4.518-4.52c1.152-1.373,1.852-3.143,1.852-5.077c0-4.361-3.535-7.896-7.896-7.896
-                  c-4.361,0-7.896,3.535-7.896,7.896s3.535,7.896,7.896,7.896c1.934,0,3.705-0.698,5.078-1.853l4.52,4.519
-                  c0.266,0.268,0.699,0.268,0.965,0C19.396,18.863,19.396,18.431,19.129,18.164z M8.567,15.028c-3.568,0-6.461-2.893-6.461-6.461
-                  s2.893-6.461,6.461-6.461c3.568,0,6.46,2.893,6.46,6.461S12.135,15.028,8.567,15.028z"></path>
-              </svg>
-            </button>
-          </div>
-        </form>
+      <div class="site-navigation">
+        <div class="content_wrapper site-navigation__wrapper">
+          <h2 class="site-logo">
+            <a href="./index.html">BitShow</a>
+          </h2>
+          <nav class="navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item"><a href="#">Movies</a></li>
+              <li class="navigation__item"><a href="#">TV Shows</a></li>
+              <li class="navigation__item"><a href="#">People</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="search-container">
+        <div class="content_wrapper">
+          <form class="search-form">
+            <div class="form-container">
+              <input class="search-input" name="search-shows" type="text" placeholder="Search shows" />
+              <button type="submit" class="search-button">
+                <!-- <i class="fas fa-search"></i> -->
+                <svg class="svg-icon" viewBox="0 0 20 20">
+                  <path fill="none" d="M19.129,18.164l-4.518-4.52c1.152-1.373,1.852-3.143,1.852-5.077c0-4.361-3.535-7.896-7.896-7.896
+                        c-4.361,0-7.896,3.535-7.896,7.896s3.535,7.896,7.896,7.896c1.934,0,3.705-0.698,5.078-1.853l4.52,4.519
+                        c0.266,0.268,0.699,0.268,0.965,0C19.396,18.863,19.396,18.431,19.129,18.164z M8.567,15.028c-3.568,0-6.461-2.893-6.461-6.461
+                        s2.893-6.461,6.461-6.461c3.568,0,6.46,2.893,6.46,6.461S12.135,15.028,8.567,15.028z"></path>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </header>
 
-    <main class="main-content content-container">
-      <section class="main-content__section">
-        <header class="section-header">
-          <h1 class="section-header__title">Movies</h1>
-        </header>
-        <div class="grid-container movies-popular"></div>
-      </section>
 
-      <section class="main-content__section">
-        <header class="section-header">
-          <h1 class="section-header__title">Shows</h1>
-        </header>
-        <div class="grid-container shows-popular"></div>
-      </section>
+    <main class="main-content">
+      <div class="content_wrapper">
+        <section class="main-content__section">
+          <header class="section-header">
+            <h1 class="section-header__title">Movies</h1>
+          </header>
+          <div class="grid-container movies-popular"></div>
+        </section>
+
+        <section class="main-content__section">
+          <header class="section-header">
+            <h1 class="section-header__title">Shows</h1>
+          </header>
+          <div class="grid-container shows-popular"></div>
+        </section>
+      </div>
     </main>
 
     <footer class="site-footer">
-      <div class="content-container">
+      <div class="content_wrapper">
         <div class="api-provider">
           <span>Data provided by</span>
           <a href="https://www.themoviedb.org/documentation/api" target="blank">

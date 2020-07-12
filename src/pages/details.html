@@ -14,58 +14,107 @@
 <body>
   <div class="site-container">
     <header class="site-header">
-      <div class="content-container header-container">
-        <h2>
-          <a href="./index.html">BitShow</a>
-        </h2>
-        <form class="search-form">
-          <div class="form-container">
-            <input class="search-input" name="search-shows" type="text" placeholder="Search shows" />
-            <button type="submit" class="search-button">
-              <!-- <i class="fas fa-search"></i> -->
-              <svg class="svg-icon" viewBox="0 0 20 20">
-                <path fill="none" d="M19.129,18.164l-4.518-4.52c1.152-1.373,1.852-3.143,1.852-5.077c0-4.361-3.535-7.896-7.896-7.896
-                  c-4.361,0-7.896,3.535-7.896,7.896s3.535,7.896,7.896,7.896c1.934,0,3.705-0.698,5.078-1.853l4.52,4.519
-                  c0.266,0.268,0.699,0.268,0.965,0C19.396,18.863,19.396,18.431,19.129,18.164z M8.567,15.028c-3.568,0-6.461-2.893-6.461-6.461
-                  s2.893-6.461,6.461-6.461c3.568,0,6.46,2.893,6.46,6.461S12.135,15.028,8.567,15.028z"></path>
-              </svg>
-            </button>
-          </div>
-        </form>
+      <div class="site-navigation">
+        <div class="content_wrapper site-navigation__wrapper">
+          <h2 class="site-logo">
+            <a href="./index.html">BitShow</a>
+          </h2>
+          <nav class="navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item"><a href="#">Movies</a></li>
+              <li class="navigation__item"><a href="#">TV Shows</a></li>
+              <li class="navigation__item"><a href="#">People</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="search-container">
+        <div class="content_wrapper">
+          <form class="search-form">
+            <div class="form-container">
+              <input class="search-input" name="search-shows" type="text" placeholder="Search shows" />
+              <button type="submit" class="search-button">
+                <svg class="svg-icon" viewBox="0 0 20 20">
+                  <path fill="none" d="M19.129,18.164l-4.518-4.52c1.152-1.373,1.852-3.143,1.852-5.077c0-4.361-3.535-7.896-7.896-7.896
+                        c-4.361,0-7.896,3.535-7.896,7.896s3.535,7.896,7.896,7.896c1.934,0,3.705-0.698,5.078-1.853l4.52,4.519
+                        c0.266,0.268,0.699,0.268,0.965,0C19.396,18.863,19.396,18.431,19.129,18.164z M8.567,15.028c-3.568,0-6.461-2.893-6.461-6.461
+                        s2.893-6.461,6.461-6.461c3.568,0,6.46,2.893,6.46,6.461S12.135,15.028,8.567,15.028z"></path>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </header>
 
-    <main class="main-content content-container">
-      <header class="page-header">
-        <div class="page-header__title-wrapper">
-          <h1 class="page-header__title">The Flash</h1>
-          <div class="page-header__subtext">
-            <span>45min</span>
-            <span class="page-header__divider">|</span>
-            <span>Drama, Mystery, Sci-Fi</span>
-            <span class="page-header__divider">|</span>
-            <span>TV Series (2019-)</span>
-          </div>
-        </div>
-        <div class="rating-wrapper">
-          <div class="rating--icon">
-            <svg class="svg-icon" viewBox="0 0 20 20">
-              <path fill="none"
-                d="M16.85,7.275l-3.967-0.577l-1.773-3.593c-0.208-0.423-0.639-0.69-1.11-0.69s-0.902,0.267-1.11,0.69L7.116,6.699L3.148,7.275c-0.466,0.068-0.854,0.394-1,0.842c-0.145,0.448-0.023,0.941,0.314,1.27l2.871,2.799l-0.677,3.951c-0.08,0.464,0.112,0.934,0.493,1.211c0.217,0.156,0.472,0.236,0.728,0.236c0.197,0,0.396-0.048,0.577-0.143l3.547-1.864l3.548,1.864c0.18,0.095,0.381,0.143,0.576,0.143c0.256,0,0.512-0.08,0.729-0.236c0.381-0.277,0.572-0.747,0.492-1.211l-0.678-3.951l2.871-2.799c0.338-0.329,0.459-0.821,0.314-1.27C17.705,7.669,17.316,7.343,16.85,7.275z M13.336,11.754l0.787,4.591l-4.124-2.167l-4.124,2.167l0.788-4.591L3.326,8.5l4.612-0.67l2.062-4.177l2.062,4.177l4.613,0.67L13.336,11.754z">
-              </path>
-            </svg>
-          </div>
-          <div class="rating--value">
-            <strong title="7.7 based on 4563 user ratings">
-              <span>7.7</span>
-            </strong>
+    <main class="main-content">
+
+      <header class="page-header page-header--backdrop_poster">
+        <div class="page-header--linear_gradient">
+          <div class="content_wrapper page-header_wrapper">
+            <div class="poster_wrapper">
+              <div class="poster">
+                <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/wHa6KOJAoNTFLFtp7wguUJKSnju.jpg" alt="">
+              </div>
+            </div>
+            <div class="overview">
+              <div class="title_wrapper">
+                <h1 class="title">The Flash</h1>
+                <div class="title__subtext">
+                  <span>45min</span>
+                  <span class="title__divider">|</span>
+                  <span>Drama, Mystery, Sci-Fi</span>
+                  <span class="title__divider">|</span>
+                  <span>TV Series (2019-)</span>
+                </div>
+              </div>
+              <div class="rating_wrapper">
+                <div class="rating--icon">
+                  <svg class="svg-icon" viewBox="0 0 20 20">
+                    <path fill="none"
+                      d="M16.85,7.275l-3.967-0.577l-1.773-3.593c-0.208-0.423-0.639-0.69-1.11-0.69s-0.902,0.267-1.11,0.69L7.116,6.699L3.148,7.275c-0.466,0.068-0.854,0.394-1,0.842c-0.145,0.448-0.023,0.941,0.314,1.27l2.871,2.799l-0.677,3.951c-0.08,0.464,0.112,0.934,0.493,1.211c0.217,0.156,0.472,0.236,0.728,0.236c0.197,0,0.396-0.048,0.577-0.143l3.547-1.864l3.548,1.864c0.18,0.095,0.381,0.143,0.576,0.143c0.256,0,0.512-0.08,0.729-0.236c0.381-0.277,0.572-0.747,0.492-1.211l-0.678-3.951l2.871-2.799c0.338-0.329,0.459-0.821,0.314-1.27C17.705,7.669,17.316,7.343,16.85,7.275z M13.336,11.754l0.787,4.591l-4.124-2.167l-4.124,2.167l0.788-4.591L3.326,8.5l4.612-0.67l2.062-4.177l2.062,4.177l4.613,0.67L13.336,11.754z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="rating--value">
+                  <strong title="7.7 based on 4563 user ratings">
+                    <span>7.7</span>
+                  </strong>
+                </div>
+              </div>
+              <div class="summary">
+                <h3>Overview</h3>
+                <p>
+                  After a particle accelerator causes a freak storm, CSI Investigator Barry Allen is struck by
+                  lightning
+                  and falls into a coma. Months later he awakens with the power of super speed, granting him the
+                  ability
+                  to move through Central City like an unseen guardian angel. Though initially excited by his newfound
+                  powers, Barry is shocked to discover he is not the only "meta-human" who was created in the wake of
+                  the accelerator explosion -- and not everyone is using their new powers for good. Barry partners
+                  with
+                  S.T.A.R. Labs and dedicates his life to protect the innocent. For now, only a few close friends and
+                  associates know that Barry is literally the fastest man alive, but it won't be long before the world
+                  learns what Barry Allen has become...The Flash.
+                </p>
+              </div>
+              <div class="creators">
+                <h4>Creators:</h4>
+                <span>Greg Berlanti, Geoff Johns, Andrew Kreisberg</span>
+                <!-- <ol class="creators__list">
+                      <li class="creators__item">
+                        <span></span>
+                      </li>
+                    </ol> -->
+              </div>
+            </div>
           </div>
         </div>
       </header>
     </main>
 
     <footer class="site-footer">
-      <div class="content-container">
+      <div class="content_wrapper">
         <div class="api-provider">
           <span>Data provided by</span>
           <a href="https://www.themoviedb.org/documentation/api" target="blank">
@@ -77,7 +126,6 @@
       </div>
     </footer>
   </div>
-
 </body>
 
 </html>

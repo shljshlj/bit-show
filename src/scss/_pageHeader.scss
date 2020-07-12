@@ -1,14 +1,81 @@
 .page-header {
-  background-color: #fff;
-}
+  color: #fff;
 
-.rating--icon {
-  .svg-icon {
-    width: 1em;
-    height: 1em;
+  &--backdrop_poster{
+    background-image: url('https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/jC1KqsFx8ZyqJyQa2Ohi7xgL7XC.jpg');
+    background-position: right -200px top;
+    background-repeat: no-repeat;
+    background-size: cover; 
   }
 
-  .svg-icon path {
-    fill: #000;
+  &--linear_gradient {
+    background-image: linear-gradient(to right, rgba(26.27%, 9.41%, 18.43%, 1.00) 150px, rgba(34.12%, 15.69%, 25.49%, 0.84) 100%);
+    height: 100%;
+  }
+
+  &_wrapper {
+    display: flex;
+    padding: 30px 40px;
+  }
+}
+
+.overview {
+  margin-left: 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  &_wrapper {
+    margin-bottom: 24px;
+  }
+}
+
+.poster_wrapper {
+  width: 300px;
+  height: auto;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.poster img {
+  display: block;
+  width: 100%;
+}
+
+.rating {
+  &_wrapper {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  &--icon {
+    .svg-icon {
+      width: 1em;
+      height: 1em;
+      margin-right: 10px;
+    }
+  
+    .svg-icon path {
+      fill: #fff;
+    }
+  }
+}
+
+.summary {
+  margin-bottom: 20px;
+
+  h3 {
+    margin: 10px 0 8px;
+  }
+}
+
+.creators {
+  h4 {
+    display: inline;
+    margin-right: 10px;
+    
   }
 }
