@@ -7,6 +7,7 @@ export const API_KEY = process.env.TMDB_API_KEY;
 export const BASE_API_ENDPOINT = 'https://api.themoviedb.org/3';
 export const MOVIE_ENDPOINT = BASE_API_ENDPOINT + '/movie';
 export const TV_ENDPOINT = BASE_API_ENDPOINT + '/tv';
+export const PERSON_ENDPOINT = BASE_API_ENDPOINT + '/person';
 
 const MOVIES_TOP_RATED = `${MOVIE_ENDPOINT}/top_rated?api_key=${API_KEY}`;
 const MOVIES_POPULAR = `${MOVIE_ENDPOINT}/popular?api_key=${API_KEY}`;

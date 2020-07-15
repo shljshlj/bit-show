@@ -1,4 +1,5 @@
 import { tvApi } from '../shared/api';
+import { personApi } from '../shared/api';
 import { API_KEY } from '../shared/constants';
 import { genreService } from './GenreService';
 
@@ -52,7 +53,7 @@ class ShowService {
     });
   }
 
-  async fetchDetails(id, language = 'en-US') {
+  async fetchDetails(tvId, language = 'en-US') {
     const options = {
       params: {
         language,
@@ -61,14 +62,12 @@ class ShowService {
       },
     };
 
-    const { data } = await tvApi.get(`/${id}`, options);
-
-    console.log(data);
+    const { data } = await tvApi.get(`/${tvId}`, options);
 
     return data;
   }
 
-  async fetchCredits(id, language = 'en-US') {
+  async fetchCredits(tvId, language = 'en-US') {
     const options = {
       params: {
         language,
@@ -76,13 +75,12 @@ class ShowService {
       },
     };
 
-    const { data } = await tvApi.get(`/${id}/credits`, options);
-    console.log(data.cast);
+    const { data } = await tvApi.get(`/${tvId}/credits`, options);
 
-    return data.cast.map((person) => new PreviewPerson(person));
+    return data.cast;
   }
 
-  async fetchExternalIds(id, language = 'en-US') {
+  async fetchEpisodeCount(personId, creditId, language = 'en-US') {
     const options = {
       params: {
         language,
@@ -90,13 +88,42 @@ class ShowService {
       },
     };
 
-    const { data } = await tvApi.get(`/${id}/external_ids`, options);
-    console.log(data);
+    const { data } = await personApi.get(`/${personId}/tv_credits`, options);
+    const show = data.cast.filter(obj => obj.credit_id === creditId)[0];
+
+    let episodeCount;
+
+    if (show) episodeCount = show.episode_count;
+    else episodeCount = null;
+
+    return episodeCount;
+  }
+
+  async createCastWithEpisodes(cast) {
+
+    return await Promise.all(cast.map(async person => {
+      const personId = person.id;
+      const creditId = person.credit_id;
+      const episodeCount = await this.fetchEpisodeCount(personId, creditId);
+
+      return new PreviewPerson(person, episodeCount);
+    }))
+  }
+
+  async fetchExternalIds(tvId, language = 'en-US') {
+    const options = {
+      params: {
+        language,
+        api_key: API_KEY,
+      },
+    };
+
+    const { data } = await tvApi.get(`/${tvId}/external_ids`, options);
 
     return new ExternalIds(data);
   }
 
-  async fetchKeywords(id, language = 'en-US') {
+  async fetchKeywords(tvId, language = 'en-US') {
     const options = {
       params: {
         language,
@@ -104,14 +131,14 @@ class ShowService {
       },
     };
 
-    const { data } = await tvApi.get(`/${id}/keywords`, options);
+    const { data } = await tvApi.get(`/${tvId}/keywords`, options);
     const keywords = data.results;
     console.log(keywords);
 
     return new Keywords(keywords);
   }
 
-  async fetchRecommended(id, page = 1, language = 'en-US') {
+  async fetchRecommended(tvId, page = 1, language = 'en-US') {
     const options = {
       params: {
         page,
@@ -120,42 +147,77 @@ class ShowService {
       },
     };
 
-    const { data } = await tvApi.get(`/${id}/recommendations`, options);
+    const { data } = await tvApi.get(`/${tvId}/recommendations`, options);
 
     return data.results;
   }
 
-  async fetchShow(id, page, language) {
-    const details = await this.fetchDetails(id, language);
-    const cast = await this.fetchCredits(id, language);
-    const externalIds = await this.fetchExternalIds(id, language);
-    const keywords = await this.fetchKeywords(id, language);
-    const recommended = await this.fetchRecommended(id, page, language);
+  async fetchShow(tvId, page, language) {
+    const details = await this.fetchDetails(tvId, language);
+    const cast = await this.fetchCredits(tvId, language);
+    const externalIds = await this.fetchExternalIds(tvId, language);
+    const keywords = await this.fetchKeywords(tvId, language);
+    const recommended = await this.fetchRecommended(tvId, page, language);
     const recommendedShows = await this.createShowPreviews(recommended);
 
-    console.log(recommendedShows);
+    let castWithEpisodes;
+    if (cast.length !== 0) castWithEpisodes = await this.createCastWithEpisodes(cast);
+    else castWithEpisodes = null;
 
-    const tvId = details.id;
 
     const {
-      backdrop_path,
-      created_by,
-      episode_run_time,
-      first_air_date,
-      genres,
-      homepage,
-      last_air_date,
+      id,
       name,
+      episode_run_time,
+      genres,
+      first_air_date,
+      last_air_date,
+      vote_average,
+      vote_count,
+      overview,
+      status,
+      type,
       number_of_episodes,
       number_of_seasons,
+      seasons,
       origin_country,
       original_language,
-      overview,
       poster_path,
-      status,
+      backdrop_path,
       videos,
-      vote_average,
+      homepage,
+      created_by,
     } = details;
+
+    const creators = created_by.map(creator => creator.name);
+
+    return new Show(
+      id,
+      name,
+      episode_run_time,
+      genres,
+      first_air_date,
+      last_air_date,
+      vote_average,
+      vote_count,
+      overview,
+      status,
+      type,
+      number_of_episodes,
+      number_of_seasons,
+      seasons,
+      origin_country,
+      original_language,
+      poster_path,
+      backdrop_path,
+      videos,
+      creators,
+      castWithEpisodes,
+      homepage,
+      externalIds,
+      keywords,
+      recommendedShows
+    );
   }
 }
 

@@ -13,8 +13,8 @@ export default class ExternalIds {
     this.twitter = twitter_id;
   }
 
-  getExternalUrl(externalId) {
-    if (this[externalId] === null) return null;
+  getExternalUrl(externalIdName) {
+    if (this[externalIdName] === null) return null;
 
     const urls = {
       imdb: `${IMDB_URL}${this.imdb}`,
@@ -23,6 +23,6 @@ export default class ExternalIds {
       twitter: `${TWITTER_URL}${this.twitter}`
     }
 
-    return urls[externalId];
+    return urls[externalIdName];
   }
 };

@@ -13,6 +13,7 @@ async function getPopularMoviesAndShows(onSuccess) {
 
 async function getSingleShow(id, onSuccess) {
   const show = await showService.fetchShow(id);
+  console.log(show);
 }
 
 async function getSingleMovie(id, onSuccess) {
