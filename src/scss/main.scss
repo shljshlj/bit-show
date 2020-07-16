@@ -1,6 +1,7 @@
 @import 'siteHeader';
 @import 'section';
 @import 'pageHeader';
+@import 'castSection';
 
 $font-primary: 'Roboto', sans-serif;
 $font-secondary: 'Montserrat', sans-serif;
@@ -30,7 +31,7 @@ h3 {
   font-family: $font-secondary;
 }
 
-ul {
+ul, ol {
   list-style-type: none;
 }
 
@@ -64,6 +65,10 @@ img {
 
   display: flex;
   flex-direction: column;
+}
+
+.main_wrapper {
+  padding: 30px 40px;
 }
 
 .grid-container {
