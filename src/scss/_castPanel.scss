@@ -1,13 +1,5 @@
 .cast {
   &__heading {
-    margin-bottom: 20px;
-
-    & h3 {
-      font-weight: 600;
-      font-size: 1.5em;
-      margin-bottom: 4px;
-    }
-
     &-label {
       font-size: 0.9em;
     }
@@ -26,7 +18,7 @@
     margin: 0px 10px 10px 0px;
 
     border: 1px solid rgb(227,227,227);
-    border-radius: 8px;
+    border-radius: var(--card-border-radius);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
     & span {
@@ -37,6 +29,12 @@
 
     & a + span {
       padding-top: 10px;
+    }
+
+    &-link img {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
     }
   }
 

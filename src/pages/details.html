@@ -101,11 +101,6 @@
               <div class="creators">
                 <h4>Creators:</h4>
                 <span>Greg Berlanti, Geoff Johns, Andrew Kreisberg</span>
-                <!-- <ol class="creators__list">
-                      <li class="creators__item">
-                        <span></span>
-                      </li>
-                    </ol> -->
               </div>
             </div>
           </div>
@@ -113,19 +108,50 @@
       </section>
 
       <div class="content_wrapper main_wrapper">
-        <section class="videos"></section>
+        <section class="panel video__panel">
+          <div class="panel__heading video__heading">
+            <h3>Videos</h3>
+          </div>
+          <div class="video_wrapper">
+            <div class="video__card">
+              <a class="video__play" href="#">
+                <div class="play-background">
+                  <span class="play-background__icon"></span>
+                </div>
+              </a>
+            </div>
+            <div class="video__card">
+              <a class="video__play" href="#">
+                <div class="play-background">
+                  <span class="play-background__icon"></span>
+                </div>
+              </a>
+            </div>
+            <div class="video__card">
+              <a class="video__play" href="#">
+                <div class="play-background">
+                  <span class="play-background__icon"></span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
 
-        <section class="seasons"></section>
+        <section class="panel seasons__panel">
+          <div class="panel__heading seasons__heading">
+            <h3>Seasons</h3>
+          </div>
+        </section>
 
-        <section class="cast-section">
-          <div class="cast__heading">
+        <section class="panel cast__panel">
+          <div class="panel__heading cast__heading">
             <h3>Cast</h3>
             <span class="cast__heading-label">Series cast summary:</span>
           </div>
           <div class="cast-scroller">
             <ol class="cast__list">
               <li class="cast__card">
-                <a href="#">
+                <a class="cast__card-link" href="#">
                   <img src="https://image.tmdb.org/t/p/w138_and_h175_face/kEGU1gGySIe63lyL7AnwXEw4rQn.jpg"
                     alt="Grant Gustin">
                 </a>
@@ -134,22 +160,21 @@
                 <span class="cast__episode_count">133 Episodes</span>
               </li>
               <li class="cast__card">
-                <a href="#">
+                <a class="cast__card-link" href="#">
                   <img src="https://image.tmdb.org/t/p/w138_and_h175_face/lrTfzh77Lh82E3QT0EpUr8UpoMi.jpg"
                     alt="Candice Patton">
                 </a>
                 <span class="cast__name"><a href="#">Candice Patton</a></span>
-                <span class="cast__character">Iris West-Allen (Mirrorverse), Iris West-Allen, Iris West-Allen (Earth-2),
-                  Millie Foss</span>
+                <span class="cast__character">Iris West-Allen (Mirrorverse) / ...</span>
                 <span class="cast__episode_count">133 Episodes</span>
               </li>
               <li class="cast__card">
-                <a href="#">
+                <a class="cast__card-link" href="#">
                   <img src="https://image.tmdb.org/t/p/w138_and_h175_face/uDQWtrmSPsNsm2DL3TMMiAtVoTq.jpg"
                     alt="Carlos Valdes">
                 </a>
                 <span class="cast__name"><a href="#">Carlos Valdes</a></span>
-                <span class="cast__character">Pablo, Cisco Ramon, Cisco Ramon / Echo, Francisco Ramon / Reverb</span>
+                <span class="cast__character">Pablo / ...</span>
                 <span class="cast__episode_count">133 Episodes</span>
               </li>
               <li class="cast__card">
@@ -184,7 +209,7 @@
           </div>
         </section>
 
-        <section class="recommended"></section>
+        <section class="panel recommended__panel"></section>
       </div>
 
     </main>
@@ -202,6 +227,16 @@
       </div>
     </footer>
   </div>
+
+
+  <div class="page-overlay"></div>
+  <div class="modal__overlay">
+    <div class="modal-wrapper">
+      <iframe width="560" height="349" src="http://www.youtube.com/embed/n_dZNLr2cME?rel=0&hd=1" frameborder="0"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
 </body>
 
 </html>

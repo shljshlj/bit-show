@@ -39,7 +39,7 @@
   width: 300px;
   height: auto;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: var(--card-border-radius);
 }
 
 .poster img {

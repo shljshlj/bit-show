@@ -26,3 +26,41 @@
     font-weight: 600;
   }
 }
+
+/* Search Form */
+
+.form-container {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: var(--card-border-radius);
+  overflow: hidden;
+}
+
+.search-input {
+  padding: 8px;
+  border: none;
+  font-size: 16px;
+}
+
+.search-input:focus,
+.search-button:focus {
+  outline: none;
+}
+
+.search-button {
+  border: none;
+  background-color: transparent;
+  color: var(--primary-icon);
+  padding: 8px;
+  font-size: 16px;
+
+  .svg-icon {
+    width: 1em;
+    height: 1em;
+  }
+
+  .svg-icon path {
+    fill: var(--primary-icon);
+  }
+}
