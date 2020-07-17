@@ -13,10 +13,10 @@ import * as ui from './ui';
 /* HOME PAGE */
 
 const $moviePopularContainer = document.querySelector(
-  '.grid-container.movies-popular'
+  '.main__section-grid.movies-popular'
 );
 const $showPopularContainer = document.querySelector(
-  '.grid-container.shows-popular'
+  '.main__section-grid.shows-popular'
 );
 
 export function initHomePage() {

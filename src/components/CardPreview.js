@@ -1,25 +1,26 @@
 export const cardPreview = (item) => {
-  const { type, id, title, rating, posterUrl } = item;
+  const { type, id, title, rating } = item;
+  const posterUrl = item.getPosterUrl();
   const releaseYear = item.getReleaseYear();
   const genres = item.getGenresFormat();
 
   const card =
     `
-    <div data-id=${id} data-type=${type} class="card">
-      <div class="img-container">
+    <div data-id=${id} data-type=${type} class="grid__card card">
+      <div class="grid__card-poster">
         <img
           alt="movie poster"
           src=${posterUrl}
         />
       </div>
-      <div class="card-content">
-        <header class="card-header">
-          <div class="card-rating">${rating}</div>
-          <h2 class="card-title">${title}</h2>
+      <div class="grid__card-content">
+        <header class="grid__card-header">
+          <div class="grid__card-rating">${rating}</div>
+          <h2 class="grid__card-title">${title}</h2>
         </header>
-        <div class="card-content-expanded">
-          <div class="card-genre">${genres}</div>
-          <div class="card-year">(${releaseYear})</div>
+        <div class="grid__card-content-expanded">
+          <div class="grid__card-genre">${genres}</div>
+          <div class="grid__card-year">(${releaseYear})</div>
         </div>
       </div>
     </div>

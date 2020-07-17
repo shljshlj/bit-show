@@ -18,12 +18,17 @@ export default class PreviewItem {
     this.genres = genres;
     this.overview = overview;
     this.rating = rating;
-    this.posterUrl = `${POSTER_PATH_M}${poster_path}`;
+    this.posterPath = poster_path;
+  }
+
+  getPosterUrl() {
+    if (!this.posterPath) return null;
+    return `${POSTER_PATH_M}${this.posterPath}`;
   }
 
   getReleaseYear() {
     if (!this.releaseDate) return null;
-    return this.releaseDate.getFullYear();
+    return new Date(this.releaseDate).getFullYear();
   }
 
   getGenreNames() {

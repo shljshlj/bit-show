@@ -1,0 +1,37 @@
+.recommended {
+  &_wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 20px;
+  }
+
+  &__picker {
+    width: calc(3 * 86px + 2 * 2px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
+    overflow: hidden;
+  }
+
+  &__picker-page {
+    display: grid;
+    grid-template-columns: repeat(3, 86px);
+    grid-gap: 2px;
+
+    // &--selected {
+    //   display: grid;
+    // }
+  }
+
+  &__title {
+    margin: 3px;
+    &--selected {
+      box-shadow: 0 0 0 2px #f3ce13;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

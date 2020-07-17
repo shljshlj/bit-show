@@ -46,11 +46,8 @@ export default class Show {
     this.seasons = seasons;
     this.originCountry = origin_country;
     this.originalLanguage = original_language;
-    this.posterUrl = {
-      poster_large: `${POSTER_PATH_L}${poster_path}`,
-      poster_medium: `${POSTER_PATH_M}${poster_path}`,
-    };
-    this.backdropUrl = `${POSTER_BACKDROP}${backdrop_path}`;
+    this.posterPath = poster_path;
+    this.backdropPath = backdrop_path;
     this.videos = videos;
     this.creators = creators;
     this.cast = cast;
@@ -58,5 +55,21 @@ export default class Show {
     this.externalIds = externalIds;
     this.keywords = keywords;
     this.recommendedShows = recommendedShows;
+  }
+
+  getBackdropUrl() {
+    if (!this.backdropPath) return null;
+    return `${POSTER_BACKDROP}${this.backdropPath}`
+  }
+
+  getPosterUrl(size = 'medium') {
+    if (!this.posterPath) return null;
+
+    const posterSizes = {
+      large: `${POSTER_PATH_L}${this.posterPath}`,
+      medium: `${POSTER_PATH_M}${this.posterPath}`,
+    };
+
+    return posterSizes[size];
   }
 }

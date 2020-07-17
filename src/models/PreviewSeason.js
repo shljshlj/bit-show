@@ -21,7 +21,7 @@ export default class PreviewSeason {
 
   getReleaseYear() {
     if (!this.airDate) return null;
-    return this.airDate.getFullYear();
+    return new Date(this.airDate).getFullYear();
   }
 
   getPosterUrl() {
@@ -29,11 +29,3 @@ export default class PreviewSeason {
     return `${POSTER_PATH_XS}${this.posterPath}`;
   }
 }
-
-// air_date: null / "2005-09-13"
-// episode_count: 3
-// id: 6902
-// name: "Specials"
-// overview: ""
-// poster_path: "/6VmmiImmxcspyjcm4qKLGVYlPh6.jpg"
-// season_number: 0
