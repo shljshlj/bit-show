@@ -22,6 +22,7 @@ export default class PreviewItem {
   }
 
   getReleaseYear() {
+    if (!this.releaseDate) return null;
     return this.releaseDate.getFullYear();
   }
 

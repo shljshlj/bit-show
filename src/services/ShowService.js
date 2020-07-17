@@ -8,6 +8,7 @@ import ExternalIds from '../models/ExternalIds';
 import Keywords from '../models/Keywords';
 import PreviewPerson from '../models/PreviewPerson';
 import Show from '../models/Show';
+import PreviewSeason from '../models/PreviewSeason';
 
 class ShowService {
   async fetchPopular(numOfShows = 4, page = 1, language = 'en-US') {
@@ -190,6 +191,7 @@ class ShowService {
     } = details;
 
     const creators = created_by.map(creator => creator.name);
+    const seasonPreviews = seasons.map(season => new PreviewSeason(season));
 
     return new Show(
       id,
@@ -205,7 +207,7 @@ class ShowService {
       type,
       number_of_episodes,
       number_of_seasons,
-      seasons,
+      seasonPreviews,
       origin_country,
       original_language,
       poster_path,

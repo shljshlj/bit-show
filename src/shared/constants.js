@@ -22,6 +22,7 @@ const TV_POPULAR = `${TV_ENDPOINT}/top_rated?api_key=${API_KEY}`;
 
 
 // Poster images
+export const POSTER_PATH_XS = imageConfiguration.images.secure_base_url + imageConfiguration.images.poster_sizes[0];
 export const POSTER_PATH_S = imageConfiguration.images.secure_base_url + imageConfiguration.images.poster_sizes[3];
 export const POSTER_PATH_M = imageConfiguration.images.secure_base_url + imageConfiguration.images.poster_sizes[4];
 export const POSTER_PATH_L = imageConfiguration.images.secure_base_url + imageConfiguration.images.poster_sizes[5];

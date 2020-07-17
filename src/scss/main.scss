@@ -3,6 +3,7 @@
 @import 'pageHeader';
 @import 'castPanel';
 @import 'videoPanel';
+@import 'seasonPanel';
 
 $font-primary: 'Roboto', sans-serif;
 $font-secondary: 'Montserrat', sans-serif;
@@ -22,6 +23,8 @@ $font-secondary: 'Montserrat', sans-serif;
   --primary-icon: #7e7e7e;
   --border-divider: #d7d7d7;
   --card-border-radius: 6px;
+  --card-border-color: #e3e3e3;
+  --card-box-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -78,6 +81,12 @@ img {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 30px;
+}
+
+.card {
+  border: 1px solid var(--card-border-color);
+  border-radius: var(--card-border-radius);
+  box-shadow: 0 2px 8px var(--card-box-shadow-color);
 }
 
 /* Panels */
