@@ -2,6 +2,8 @@ import { POSTER_PATH_L } from '../shared/constants';
 import { POSTER_PATH_M } from '../shared/constants';
 import { POSTER_BACKDROP } from '../shared/constants';
 
+import findLanguageName from '../utils/findLanguageName';
+
 export default class Show {
   constructor(
     id,
@@ -71,5 +73,10 @@ export default class Show {
     };
 
     return posterSizes[size];
+  }
+
+  getOriginalLanguageName() {
+    if (!this.originalLanguage) return null;
+    return findLanguageName(this.originalLanguage);
   }
 }
