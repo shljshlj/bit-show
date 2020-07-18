@@ -3,6 +3,7 @@ import { POSTER_PATH_M } from '../shared/constants';
 import { POSTER_BACKDROP } from '../shared/constants';
 
 import findLanguageName from '../utils/findLanguageName';
+import findCountryName from '../utils/findCountryName';
 
 export default class Show {
   constructor(
@@ -78,5 +79,11 @@ export default class Show {
   getOriginalLanguageName() {
     if (!this.originalLanguage) return null;
     return findLanguageName(this.originalLanguage);
+  }
+
+  getCountryOfOrigin() {
+    if (this.originCountry.length === 0) return null;
+
+    return this.originCountry.map(country => findCountryName(country));
   }
 }
