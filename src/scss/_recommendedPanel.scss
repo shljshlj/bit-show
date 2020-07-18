@@ -1,4 +1,8 @@
 .recommended {
+  &__panel {
+    grid-area: recommended;
+  }
+
   &_wrapper {
     display: grid;
     grid-template-columns: auto 1fr;

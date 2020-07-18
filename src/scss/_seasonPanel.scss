@@ -1,4 +1,8 @@
 .season {
+  &__panel {
+    grid-area: season;
+  }
+  
   &__card {
     display: flex;
     margin-bottom: 10px;
@@ -10,10 +14,6 @@
   
   &__content {
     padding: 20px;
-  }
-
-  &__heading {
-    margin-bottom: 5px;
   }
 
   &_subheading {

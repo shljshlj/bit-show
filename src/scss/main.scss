@@ -1,11 +1,14 @@
+@import 'abstracts/mixins';
 @import 'siteHeader';
 @import 'mainSection';
+@import 'singlePage';
 @import 'previewItemCard';
 @import 'pageHeader';
 @import 'castPanel';
 @import 'videoPanel';
 @import 'seasonPanel';
 @import 'recommendedPanel';
+@import 'detailsPanel';
 
 // $font-primary: 'Roboto', sans-serif;
 $font-primary: 'Source Sans Pro', sans-serif;
@@ -84,34 +87,6 @@ a {
 
   & img {
     display: block;
-  }
-}
-
-/* Panels */
-
-.panel {
-  padding: 30px 0;
-  border-bottom: 1px solid var(--border-divider);
-
-  &:first-of-type {
-    padding-top: 0px;
-  }
-
-  &:last-of-type {
-    padding-bottom: 0px;
-    border-bottom: none;
-  }
-
-  &__heading {
-    margin-bottom: 20px;
-
-    h3 {
-      font-weight: 400;
-      font-size: 1.5em;
-      letter-spacing: 0.2em;
-      margin-bottom: 4px;
-      text-transform: uppercase;
-    }
   }
 }
 

@@ -1,12 +1,20 @@
 .video {
+  &__panel {
+    grid-area: video;
+  }
+  
   &_wrapper {
     display: flex;
+    overflow-x: auto;
+
+    @include fader-vertical;
   }
 
   &__card {
     // width: 400px;
     width: calc(33%);
-    height: 250px;
+    min-width: 300px;
+    height: 200px;
     margin-right: 10px;
     background-image: url('https://i.ytimg.com/vi/Yj0l7iGKh8g/hqdefault.jpg');
     background-size: cover;

@@ -1,16 +1,27 @@
 .cast {
+  &__panel {
+    grid-area: cast;
+  }
+  
   &__heading {
     &-label {
       font-size: 0.9em;
     }
   }
+
+  &-scroller {
+    @include fader-vertical;
+  }
   
   &__list {
     display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   &__card {
     width: 140px;
+    min-width: 140px;
     display: flex;
     flex-direction: column;
     padding-bottom: 10px;
