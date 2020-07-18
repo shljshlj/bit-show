@@ -49,13 +49,19 @@ function handleCardClick(event) {
 
 /* DETAILS PAGE */
 
+const $singlePage = document.querySelector('.single-page');
+
+function onSuccessDetailsPage(item) {
+  ui.displaySingleItem(item, $singlePage);
+}
+
 export function initDetailsPage() {
   const id = localStorage.getItem('id');
   const type = localStorage.getItem('type');
 
   if (type === 'movie') {
-    getSingleMovie(id);
+    getSingleMovie(id, onSuccessDetailsPage);
   } else {
-    getSingleShow(id);
+    getSingleShow(id, onSuccessDetailsPage);
   }
 }

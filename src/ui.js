@@ -7,4 +7,11 @@ function displayPreview(items, container) {
   });
 }
 
-export { displayPreview };
+function displaySingleItem(item, container) {
+  console.log(item);
+}
+
+export {
+  displayPreview,
+  displaySingleItem
+};
