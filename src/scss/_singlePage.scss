@@ -4,10 +4,10 @@
     grid-template-columns: minmax(0, 1fr) 260px;
     grid-column-gap: 20px;
     grid-template-areas:
-      'cast details'
-      'season details'
-      'video details'
-      'recommended details';
+      'cast more-info'
+      'season more-info'
+      'video more-info'
+      'recommended more-info';
   }
 }
 
@@ -29,13 +29,25 @@
 
   &__heading {
     margin-bottom: 20px;
+    text-transform: uppercase;
 
     h3 {
       font-weight: 400;
       font-size: 1.5em;
       letter-spacing: 0.2em;
       margin-bottom: 4px;
-      text-transform: uppercase;
+    }
+
+    h4 {
+      font-weight: 400;
+      font-size: 1em;
+      letter-spacing: 0.2em;
+      margin-bottom: 4px;
+
+      &::before,
+      &::after {
+        content: '\2014';
+      }
     }
   }
 }
