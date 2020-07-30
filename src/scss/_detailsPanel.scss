@@ -51,4 +51,25 @@
     }
   }
 
-} 
+}
+
+/* Keywords Panel */
+
+.keywords {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    font-size: 0.9em;
+    padding: 4px 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+
+    background-color: rgba(0, 0, 0, .1);
+    border: 1px solid #d7d7d7;
+    border-radius: 4px;
+    cursor: default;
+  }
+}

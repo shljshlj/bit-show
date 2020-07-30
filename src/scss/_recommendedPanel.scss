@@ -3,39 +3,46 @@
     grid-area: recommended;
   }
 
-  &_wrapper {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-gap: 20px;
+  &__list {
+    display: flex;
+    overflow-x: auto;
+
+    @include fader-vertical;
   }
 
-  &__picker {
-    width: calc(3 * 86px + 2 * 2px);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 8px;
-    overflow: hidden;
-  }
+  &__item {
+    min-width: 250px;
+    flex: 1 0 25%;
+    margin-right: 15px;
+    margin-bottom: 10px;
 
-  &__picker-page {
-    display: grid;
-    grid-template-columns: repeat(3, 86px);
-    grid-gap: 2px;
+    display: flex;
+    flex-direction: column;
 
-    // &--selected {
-    //   display: grid;
-    // }
-  }
-
-  &__title {
-    margin: 3px;
-    &--selected {
-      box-shadow: 0 0 0 2px #f3ce13;
+    &:last-of-type {
+      margin-right: 0px;
     }
 
-    img {
-      width: 100%;
-      height: auto;
+    &-image {
+      border-radius: var(--card-border-radius);
+      overflow: hidden;
+
+      a {
+        display: block;
+        width: 100%;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &-info {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 4px;
     }
   }
 }
