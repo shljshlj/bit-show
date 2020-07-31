@@ -49,10 +49,11 @@ function handleCardClick(event) {
 
 /* DETAILS PAGE */
 
-const $singlePage = document.querySelector('.single-page');
+const $pageHeader = document.querySelector('.page-header-container');
+const $pageGrid = document.querySelector('.single-page__grid');
 
 function onSuccessDetailsPage(item) {
-  ui.displaySingleItem(item, $singlePage);
+  ui.displaySingleItem(item, $pageHeader, $pageGrid);
 }
 
 export function initDetailsPage() {

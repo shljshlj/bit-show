@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BitShows</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="site-container">
+    <header class="site-header">
+      <div class="site-navigation">
+        <div class="content_wrapper site-navigation__wrapper">
+          <h2 class="site-logo">
+            <a href="./index.html">BitShow</a>
+          </h2>
+          <nav class="navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item"><a href="#">Movies</a></li>
+              <li class="navigation__item"><a href="#">TV Shows</a></li>
+              <li class="navigation__item"><a href="#">People</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="search-container">
+        <div class="content_wrapper search_form_wrapper">
+          <form class="search-form">
+            <div class="form-container">
+              <input class="search-input" name="search-shows" type="text"
+                placeholder="Search for a show, movie, person" />
+              <span class="search-clear icon--hidden">
+                <i class="fas fa-times"></i>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="search-results-container hidden">
+        <div class="search-results_wrapper">
+          <ul class="search-results__list">
+            <li class="search-results__item">
+              <div class="item_wrapper">
+                <div class="search-results__icon search__icon"></div>
+                <span>Legacy of Lies</span>
+              </div>
+            </li>
+            <li class="search-results__item">
+              <div class="item_wrapper">
+                <div class="search-results__icon search__icon"></div>
+                <span>Greyhound</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content single-page">
+
+      <section class="page-header page-header--backdrop_poster">
+        <div class="page-header--linear_gradient">
+          <div class="content_wrapper page-header_wrapper">
+            <div class="poster_wrapper">
+              <div class="poster">
+                <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/wHa6KOJAoNTFLFtp7wguUJKSnju.jpg" alt="">
+              </div>
+            </div>
+            <div class="overview">
+              <div class="title_wrapper">
+                <h1 class="title">The Flash</h1>
+                <div class="title__subtext">
+                  <span>45min</span>
+                  <span class="title__divider">&vert;</span>
+                  <span>Drama, Mystery, Sci-Fi</span>
+                  <span class="title__divider">&vert;</span>
+                  <span>TV Series (2019-)</span>
+                </div>
+              </div>
+              <div class="rating_wrapper">
+                <div class="rating--icon">
+                </div>
+                <div class="rating--value">
+                  <strong title="7.7 based on 4563 user ratings">
+                    <span>7.7</span>
+                  </strong>
+                </div>
+              </div>
+              <div class="summary">
+                <h3>Overview</h3>
+                <p>
+                  After a particle accelerator causes a freak storm, CSI Investigator Barry Allen is struck by
+                  lightning
+                  and falls into a coma. Months later he awakens with the power of super speed, granting him the
+                  ability
+                  to move through Central City like an unseen guardian angel. Though initially excited by his newfound
+                  powers, Barry is shocked to discover he is not the only "meta-human" who was created in the wake of
+                  the accelerator explosion -- and not everyone is using their new powers for good. Barry partners
+                  with
+                  S.T.A.R. Labs and dedicates his life to protect the innocent. For now, only a few close friends and
+                  associates know that Barry is literally the fastest man alive, but it won't be long before the world
+                  learns what Barry Allen has become...The Flash.
+                </p>
+              </div>
+              <div class="creators">
+                <h4>Creators:</h4>
+                <span>Greg Berlanti, Geoff Johns, Andrew Kreisberg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="content_wrapper main_wrapper single-page__grid">
+        <section class="panel cast__panel">
+          <div class="panel__heading cast__heading">
+            <h3>Cast</h3>
+            <span class="cast__heading-label">Series cast summary:</span>
+          </div>
+          <div class="cast-scroller should_fade is_fading">
+            <ol class="cast__list">
+              <li class="cast__card card">
+                <a class="cast__card-link" href="#">
+                  <img src="https://image.tmdb.org/t/p/w138_and_h175_face/kEGU1gGySIe63lyL7AnwXEw4rQn.jpg"
+                    alt="Grant Gustin">
+                </a>
+                <span class="cast__name"><a href="#">Grant Gustin</a></span>
+                <span class="cast__character">Barry Allen</span>
+                <span class="cast__episode_count">133 Episodes</span>
+              </li>
+              <li class="cast__card card">
+                <a class="cast__card-link" href="#">
+                  <img src="https://image.tmdb.org/t/p/w138_and_h175_face/lrTfzh77Lh82E3QT0EpUr8UpoMi.jpg"
+                    alt="Candice Patton">
+                </a>
+                <span class="cast__name"><a href="#">Candice Patton</a></span>
+                <span class="cast__character">Iris West-Allen (Mirrorverse) / ...</span>
+                <span class="cast__episode_count">133 Episodes</span>
+              </li>
+              <li class="cast__card card">
+                <a class="cast__card-link" href="#">
+                  <img src="https://image.tmdb.org/t/p/w138_and_h175_face/uDQWtrmSPsNsm2DL3TMMiAtVoTq.jpg"
+                    alt="Carlos Valdes">
+                </a>
+                <span class="cast__name"><a href="#">Carlos Valdes</a></span>
+                <span class="cast__character">Pablo / ...</span>
+                <span class="cast__episode_count">133 Episodes</span>
+              </li>
+              <li class="cast__card card">
+                <a class="cast__card-link" href="#">
+                  <img src="https://image.tmdb.org/t/p/w138_and_h175_face/kEGU1gGySIe63lyL7AnwXEw4rQn.jpg"
+                    alt="Grant Gustin">
+                </a>
+                <span class="cast__name"><a href="#">Grant Gustin</a></span>
+                <span class="cast__character">Barry Allen</span>
+                <span class="cast__episode_count">133 Episodes</span>
+              </li>
+              <li class="cast__card card">
+                <a class="cast__card-link" href="#">
+                  <img src="https://image.tmdb.org/t/p/w138_and_h175_face/lrTfzh77Lh82E3QT0EpUr8UpoMi.jpg"
+                    alt="Candice Patton">
+                </a>
+                <span class="cast__name"><a href="#">Candice Patton</a></span>
+                <span class="cast__character">Iris West-Allen (Mirrorverse) / ...</span>
+                <span class="cast__episode_count">133 Episodes</span>
+              </li>
+              <li class="cast__card card">
+                <a class="cast__card-link" href="#">
+                  <img src="https://image.tmdb.org/t/p/w138_and_h175_face/uDQWtrmSPsNsm2DL3TMMiAtVoTq.jpg"
+                    alt="Carlos Valdes">
+                </a>
+                <span class="cast__name"><a href="#">Carlos Valdes</a></span>
+                <span class="cast__character">Pablo / ...</span>
+                <span class="cast__episode_count">133 Episodes</span>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="panel season__panel">
+          <div class="panel__heading season__heading">
+            <h3>Seasons</h3>
+          </div>
+          <div class="season_wrapper">
+            <ol class="season__list">
+              <li class="season__card card">
+                <div class="season__card-poster">
+                  <img src="https://image.tmdb.org/t/p/w92/z3CqL2vnjgLuefOiR5AYD9Tf91S.jpg">
+                </div>
+                <div class="season__content">
+                  <h2 class="season__title">Flash: Season 4</h2>
+                  <h4 class="season__subheading">
+                    <span>2019 &vert; 19 Episodes</span>
+                  </h4>
+                  <div class="season__overview">
+                    <p>
+                      In season six, Team Flash contends with an all-new villain, Dr. Ramsey Rosso aka Bloodwork!
+                    </p>
+                  </div>
+
+                </div>
+              </li>
+              <li class="season__card card">
+                <div class="season__card-poster">
+                  <img src="https://image.tmdb.org/t/p/w92/z3CqL2vnjgLuefOiR5AYD9Tf91S.jpg">
+                </div>
+                <div class="season__content">
+                  <h2 class="season__title">Flash: Season 4</h2>
+                  <h4 class="season__subheading">
+                    <span>2019 &vert; 19 Episodes</span>
+                  </h4>
+                  <div class="season__overview">
+                    <p>
+                      In season six, Team Flash contends with an all-new villain, Dr. Ramsey Rosso aka Bloodwork!
+                    </p>
+                  </div>
+
+                </div>
+              </li>
+              <li class="season__card card">
+                <div class="season__card-poster">
+                  <img src="https://image.tmdb.org/t/p/w92/z3CqL2vnjgLuefOiR5AYD9Tf91S.jpg">
+                </div>
+                <div class="season__content">
+                  <h2 class="season__title">Flash: Season 4</h2>
+                  <h4 class="season__subheading">
+                    <span>2019 &vert; 19 Episodes</span>
+                  </h4>
+                  <div class="season__overview">
+                    <p>
+                      In season six, Team Flash contends with an all-new villain, Dr. Ramsey Rosso aka Bloodwork!
+                    </p>
+                  </div>
+
+                </div>
+              </li>
+              <li class="season__card card">
+                <div class="season__card-poster">
+                  <img src="https://image.tmdb.org/t/p/w92/z3CqL2vnjgLuefOiR5AYD9Tf91S.jpg">
+                </div>
+                <div class="season__content">
+                  <h2 class="season__title">Flash: Season 4</h2>
+                  <h4 class="season__subheading">
+                    <span>2019 &vert; 19 Episodes</span>
+                  </h4>
+                  <div class="season__overview">
+                    <p>
+                      In season six, Team Flash contends with an all-new villain, Dr. Ramsey Rosso aka Bloodwork!
+                    </p>
+                  </div>
+
+                </div>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="panel video__panel">
+          <div class="panel__heading video__heading">
+            <h3>Videos</h3>
+          </div>
+          <div class="video_wrapper">
+            <div class="video__card">
+              <a class="video__play" href="#">
+                <div class="play-background">
+                  <span class="play-background__icon"></span>
+                </div>
+              </a>
+            </div>
+            <div class="video__card">
+              <a class="video__play" href="#">
+                <div class="play-background">
+                  <span class="play-background__icon"></span>
+                </div>
+              </a>
+            </div>
+            <div class="video__card">
+              <a class="video__play" href="#">
+                <div class="play-background">
+                  <span class="play-background__icon"></span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel recommended__panel">
+          <div class="panel__heading recommended__heading">
+            <h3>More Like This</h3>
+          </div>
+          <ul class="recommended__list">
+            <li class="recommended__item">
+              <div class="recommended__item-image">
+                <a href="#">
+                  <img src="https://image.tmdb.org/t/p/w500_and_h282_face/fFT7T9y9NVRdcdVh81roVrJBcDh.jpg" alt="">
+                </a>
+              </div>
+              <div class="recommended__item-info">
+                <a href="#">Arrow</a>
+                <span>83%</span>
+              </div>
+            </li>
+            <li class="recommended__item">
+              <div class="recommended__item-image">
+                <a href="#">
+                  <img src="https://image.tmdb.org/t/p/w500_and_h282_face/fFT7T9y9NVRdcdVh81roVrJBcDh.jpg" alt="">
+                </a>
+              </div>
+              <div class="recommended__item-info">
+                <a href="#">Arrow</a>
+                <span>83%</span>
+              </div>
+            </li>
+            <li class="recommended__item">
+              <div class="recommended__item-image">
+                <a href="#">
+                  <img src="https://image.tmdb.org/t/p/w500_and_h282_face/fFT7T9y9NVRdcdVh81roVrJBcDh.jpg" alt="">
+                </a>
+              </div>
+              <div class="recommended__item-info">
+                <a href="#">Arrow</a>
+                <span>83%</span>
+              </div>
+            </li>
+            <li class="recommended__item">
+              <div class="recommended__item-image">
+                <a href="#">
+                  <img src="https://image.tmdb.org/t/p/w500_and_h282_face/fFT7T9y9NVRdcdVh81roVrJBcDh.jpg" alt="">
+                </a>
+              </div>
+              <div class="recommended__item-info">
+                <a href="#">Arrow</a>
+                <span>83%</span>
+              </div>
+            </li>
+            <li class="recommended__item">
+              <div class="recommended__item-image">
+                <a href="#">
+                  <img src="https://image.tmdb.org/t/p/w500_and_h282_face/fFT7T9y9NVRdcdVh81roVrJBcDh.jpg" alt="">
+                </a>
+              </div>
+              <div class="recommended__item-info">
+                <a href="#">Arrow</a>
+                <span>83%</span>
+              </div>
+            </li>
+            <li class="recommended__item">
+              <div class="recommended__item-image">
+                <a href="#">
+                  <img src="https://image.tmdb.org/t/p/w500_and_h282_face/fFT7T9y9NVRdcdVh81roVrJBcDh.jpg" alt="">
+                </a>
+              </div>
+              <div class="recommended__item-info">
+                <a href="#">Arrow</a>
+                <span>83%</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <div class="more-info">
+          <section class="panel details__panel">
+            <div class="panel__heading details__heading">
+              <h4>Series Details</h4>
+            </div>
+            <table class="details__table">
+              <tbody>
+                <tr>
+                  <td>Country:</td>
+                  <td>USA</td>
+                </tr>
+                <tr>
+                  <td>Language</td>
+                  <td>English</td>
+                </tr>
+                <tr>
+                  <td>Release Date:</td>
+                  <td>2 December 2013</td>
+                </tr>
+                <tr>
+                  <td>Status:</td>
+                  <td>Returning</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="panel keywords__panel">
+            <div class="panel__heading facts__heading">
+              <h4>Keywords</h4>
+            </div>
+            <ul class="keywords__list">
+              <li class="keywords__item">dc comics</li>
+              <li class="keywords__item">superhero</li>
+              <li class="keywords__item">speed</li>
+              <li class="keywords__item">based on comic</li>
+              <li class="keywords__item">masked superhero</li>
+              <li class="keywords__item">supervillain</li>
+            </ul>
+          </section>
+
+          <section class="panel links__panel">
+            <ul class="links__list">
+              <li class="links__item">
+                <a title="Visit Facebook" href="#" target="_blank">
+                  <span><i class="fab fa-facebook-square"></i></span>
+                </a>
+              </li>
+              <li class="links__item">
+                <a href="#">
+                  <span><i class="fab fa-twitter"></i></span>
+                </a>
+              </li>
+              <li class="links__item">
+                <a href="#">
+                  <span><i class="fab fa-instagram"></i></span>
+                </a>
+              </li>
+              <li class="links__item">
+                <a href="#">
+                  <span>
+                    <i class="fas fa-link"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <section class="links__imdb">
+            <span class="imdbRatingPlugin" data-title="tt0090798" data-style="t1">
+              <a href="https://www.imdb.com/title/tt0090798/?ref_=tt_plg_rt">
+                <img alt="Caravaggio (1986) on IMDb"
+                  src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png" />
+              </a>
+            </span>
+          </section>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="content_wrapper">
+        <div class="api-provider">
+          <span>Data provided by</span>
+          <a href="https://www.themoviedb.org/documentation/api" target="blank">
+            <span class="api-provider-logo">
+              <img src="../assets/tmdb.svg" />
+            </span>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+  <div class="page-overlay"></div>
+  <div class="modal__overlay">
+    <div class="modal-wrapper">
+      <!-- <iframe width="560" height="349" src="http://www.youtube.com/embed/n_dZNLr2cME?rel=0&hd=1" frameborder="0"
+        allowfullscreen></iframe> -->
+    </div>
+  </div>
+
+  <script>
+    (function (d, s, id) {
+      var js,
+        stags = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {
+        return;
+      }
+      js = d.createElement(s);
+      js.id = id;
+      js.src =
+        'https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js';
+      stags.parentNode.insertBefore(js, stags);
+    })(document, 'script', 'imdb-rating-api');
+  </script>
+</body>
+
+</html>

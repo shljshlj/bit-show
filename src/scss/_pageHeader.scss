@@ -1,7 +1,6 @@
 .page-header {
-  color: #fff;
-
   &--backdrop_poster{
+    color: #fff;
     background-image: url('https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/jC1KqsFx8ZyqJyQa2Ohi7xgL7XC.jpg');
     background-position: right -200px top;
     background-repeat: no-repeat;
@@ -33,6 +32,10 @@
   &_wrapper {
     margin-bottom: 24px;
   }
+
+  &__divider {
+    margin: 0 3px;
+  }
 }
 
 .poster_wrapper {
@@ -50,19 +53,17 @@
 .rating {
   &_wrapper {
     display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 1.4em;
     margin-bottom: 20px;
   }
 
   &--icon {
-    .svg-icon {
-      width: 1em;
-      height: 1em;
-      margin-right: 10px;
-    }
-  
-    .svg-icon path {
-      fill: #fff;
-    }
+    margin-right: 8px;
+    background-image: url('../assets/favorite.svg');
+    width: 1em;
+    height: 1em;
   }
 }
 

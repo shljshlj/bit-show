@@ -33,9 +33,10 @@ export default class Show {
     keywords,
     recommendedShows
   ) {
+    this.media = 'tv';
     this.id = id;
     this.title = name;
-    this.episodeRunTime = episode_run_time[0];
+    this.episodeRuntime = episode_run_time[0];
     this.genres = genres;
     this.firstAirDate = first_air_date;
     this.lastAirDate = last_air_date;
@@ -58,6 +59,30 @@ export default class Show {
     this.externalIds = externalIds;
     this.keywords = keywords;
     this.recommendedShows = recommendedShows;
+  }
+
+  getGenreList() {
+    let genreList = '';
+    for (let i = 0; i < this.genres.length; i++) {
+      if (i === this.genres.length - 1) genreList += this.genres[i].name;
+      else genreList += this.genres[i].name + ', ';
+    }
+
+    return genreList;
+  }
+
+  getCreatorsList() {
+    let creatorsList = '';
+
+    for (let i = 0; i < this.creators.length; i++) {
+      if (i === this.creators.length - 1) creatorsList += this.creators[i];
+      else creatorsList += this.creators[i] + ', ';
+    }
+
+    return {
+      numOfCreators: this.creators.length,
+      creatorsList
+    };
   }
 
   getBackdropUrl() {
