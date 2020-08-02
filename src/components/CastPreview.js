@@ -19,7 +19,7 @@ export const castPreview = (media, cast) => {
         </div>
         <div class="cast-scroller should_fade is_fading">
           <ol class="cast__list">
-          ${castCardList.join('\n')}
+            ${castCardList.join('\n')}
           </ol>
         </div>
       </section>

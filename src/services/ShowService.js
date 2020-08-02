@@ -134,7 +134,6 @@ class ShowService {
 
     const { data } = await tvApi.get(`/${tvId}/keywords`, options);
     const keywords = data.results;
-    console.log(keywords);
 
     return new Keywords(keywords);
   }
