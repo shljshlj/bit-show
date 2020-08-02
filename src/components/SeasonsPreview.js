@@ -4,6 +4,8 @@ export const seasonsPreview = (title, seasons) => {
   const seasonsInOrder = seasons.sort((a, b) => b.seasonNumber - a.seasonNumber);
   const seasonsList = seasons.length > 8 ? seasonsInOrder.slice(0, 8) : seasonsInOrder;
 
+  const linkMore = `<a class="link--more" href="#">Show More Seasons</a>`;
+
   const seasonCardList = seasonsList.map(season => {
     const posterUrl = season.getPosterUrl();
     const releaseYear = season.getReleaseYear();
@@ -21,6 +23,7 @@ export const seasonsPreview = (title, seasons) => {
         <ol class="season__list">
           ${seasonCardList.join('\n')}
         </ol>
+        ${seasons.length > 8 ? linkMore : ''}
       </div>
     </section>
   `;

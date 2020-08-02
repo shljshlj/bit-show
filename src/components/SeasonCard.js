@@ -3,7 +3,7 @@ export const seasonCard = ({ title, episodeCount, overview }, posterUrl, release
   const seasonOverview = overview ?
     `
       <div class="season__overview">
-        <p>
+        <p class="text-overview">
           ${overview}
         </p>
     </div>

@@ -135,10 +135,8 @@ SVG Icons - END
   width: 100px;
 }
 
-
-// ???
 .text-overview {
-  font-size: 1em; // 0.9em?
+  font-size: 1em;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -146,8 +144,21 @@ SVG Icons - END
   overflow: hidden;
   margin: 0;
 }
-// ???
 
+.link {
+  &--more {
+    display: block;
+    margin-top: 4px;
+    color: var(--bg-dark);
+    font-weight: 600;
+
+    &::after {
+      content: ' \00BB';
+      color: #000;
+      font-weight: 400;
+    }
+  }
+}
 
 /* Icons */
 
