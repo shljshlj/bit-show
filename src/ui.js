@@ -73,9 +73,16 @@ function displaySingleItem(item, headerContainer, gridContainer) {
 
   const seasonsPanel = seasonsPreview(title, seasons);
 
+  /* Videos Panel */
 
-  const videosPanel = videosPreview();
-  const recommendedPanel = recommendedPreview();
+  const videosPanel = videosPreview(videos);
+
+  /* Recommended Panel */
+
+  const recommendedPanel = recommendedPreview(recommendedShows);
+
+  /* Details Panel */
+
   const detailsPanel = detailsPreview();
 
 
