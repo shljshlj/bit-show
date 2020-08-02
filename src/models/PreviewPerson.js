@@ -11,7 +11,7 @@ export default class PreviewPerson {
     this.profilePath = profile_path;
   }
 
-  getProfileImageUrl() {
+  getProfileImgUrl() {
     if (!this.profilePath) return null;
     return `${PROFILE_IMG_M}${this.profilePath}`;
   }

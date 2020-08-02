@@ -65,7 +65,9 @@ function displaySingleItem(item, headerContainer, gridContainer) {
     backdropUrl
   );
 
-  const castPanel = castPreview();
+  /* Cast */
+
+  const castPanel = castPreview(media, cast);
   const seasonsPanel = seasonsPreview();
   const videosPanel = videosPreview();
   const recommendedPanel = recommendedPreview();
