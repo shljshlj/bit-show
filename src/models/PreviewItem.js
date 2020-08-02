@@ -2,7 +2,7 @@ import { POSTER_PATH_M } from '../shared/constants';
 
 export default class PreviewItem {
   constructor(
-    type,
+    media,
     id,
     title,
     releaseDate,
@@ -11,7 +11,7 @@ export default class PreviewItem {
     rating,
     poster_path
   ) {
-    this.type = type;
+    this.media = media;
     this.id = id;
     this.title = title;
     this.releaseDate = new Date(releaseDate);

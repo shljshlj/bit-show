@@ -71,6 +71,19 @@ export default class Show {
     return genreList;
   }
 
+  getDateFormat() {
+    if (this.firstAirDate) {
+      const releaseYear = new Date(this.firstAirDate).getFullYear();
+
+      if (this.status === 'Ended' && this.lastAirDate) {
+        const lastAirYear = new Date(this.lastAirDate).getFullYear();
+        return `(${releaseYear}&ndash;${lastAirYear})`;
+      }
+
+      return `(${releaseYear}&ndash;)`;
+    }
+  }
+
   getCreatorsList() {
     let creatorsList = '';
 
@@ -111,4 +124,4 @@ export default class Show {
 
     return this.originCountry.map(country => findCountryName(country));
   }
-}
+};

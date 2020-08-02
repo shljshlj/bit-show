@@ -1,5 +1,9 @@
-export const pageHeaderPreview = (title, runtime, genres, voteAverage, voteCount, creators, overview, posterUrl, backdropUrl) => {
+export const pageHeaderPreview = (media, title, runtime, genres, dateFormat, voteAverage, voteCount, creators, overview, posterUrl, backdropUrl) => {
   const { numOfCreators, creatorsList } = creators;
+
+  const dateSpan = media === 'tv' ?
+    `<span>TV Series ${dateFormat}</span>` :
+    `<span>${dateFormat}</span>`;
 
 
   const header =
@@ -9,7 +13,7 @@ export const pageHeaderPreview = (title, runtime, genres, voteAverage, voteCount
         <div class="content_wrapper page-header_wrapper">
           <div class="poster_wrapper">
             <div class="poster">
-              <img src=${posterUrl} alt="">
+              <img src=${posterUrl} alt="Poster for ${title} show">
             </div>
           </div>
           <div class="overview">
@@ -20,7 +24,7 @@ export const pageHeaderPreview = (title, runtime, genres, voteAverage, voteCount
                 <span class="title__divider">&vert;</span>
                 <span>${genres}</span>
                 <span class="title__divider">&vert;</span>
-                <span>TV Series (2019-)</span>
+                ${dateSpan}
               </div>
             </div>
             <div class="rating_wrapper">

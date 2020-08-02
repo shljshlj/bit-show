@@ -1,12 +1,12 @@
 export const cardPreview = (item) => {
-  const { type, id, title, rating } = item;
+  const { media, id, title, rating } = item;
   const posterUrl = item.getPosterUrl();
   const releaseYear = item.getReleaseYear();
   const genres = item.getGenresFormat();
 
   const card =
     `
-    <div data-id=${id} data-type=${type} class="grid__card card">
+    <div data-id=${id} data-media=${media} class="grid__card card">
       <div class="grid__card-poster">
         <img
           alt="movie poster"

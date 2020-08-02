@@ -49,8 +49,22 @@ function displaySingleItem(item, headerContainer, gridContainer) {
   const itemCreators = item.getCreatorsList();
   const posterUrl = item.getPosterUrl();
   const backdropUrl = item.getBackdropUrl();
+  const itemDateFormat = item.getDateFormat();
 
-  const headerPanel = pageHeaderPreview(title, itemRuntime, itemGenres, voteAverage, voteCount, itemCreators, overview, posterUrl, backdropUrl);
+  const headerPanel = pageHeaderPreview(
+    media,
+    title,
+    itemRuntime,
+    itemGenres,
+    itemDateFormat,
+    voteAverage,
+    voteCount,
+    itemCreators,
+    overview,
+    posterUrl,
+    backdropUrl
+  );
+
   const castPanel = castPreview();
   const seasonsPanel = seasonsPreview();
   const videosPanel = videosPreview();

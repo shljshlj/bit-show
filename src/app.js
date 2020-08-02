@@ -1,8 +1,4 @@
-import {
-  getPopularMoviesAndShows,
-  getSingleMovie,
-  getSingleShow,
-} from './data';
+import * as data from './data';
 import * as ui from './ui';
 
 // 1. fetch popular movies and shows
@@ -20,7 +16,7 @@ const $showPopularContainer = document.querySelector(
 );
 
 export function initHomePage() {
-  getPopularMoviesAndShows(onSuccessHomePage);
+  data.getPopularMoviesAndShows(onSuccessHomePage);
 }
 
 function onSuccessHomePage(movies, shows) {
@@ -35,10 +31,10 @@ function setupEventListeners(event) {
 
   const el = event.target.closest('[data-id]');
   const id = el.getAttribute('data-id');
-  const type = el.getAttribute('data-type');
+  const media = el.getAttribute('data-media');
 
   localStorage.setItem('id', id);
-  localStorage.setItem('type', type);
+  localStorage.setItem('media', media);
 
   window.location.href = './details.html';
 }
@@ -58,11 +54,11 @@ function onSuccessDetailsPage(item) {
 
 export function initDetailsPage() {
   const id = localStorage.getItem('id');
-  const type = localStorage.getItem('type');
+  const media = localStorage.getItem('media');
 
-  if (type === 'movie') {
-    getSingleMovie(id, onSuccessDetailsPage);
+  if (media === 'movie') {
+    data.getSingleMovie(id, onSuccessDetailsPage);
   } else {
-    getSingleShow(id, onSuccessDetailsPage);
+    data.getSingleShow(id, onSuccessDetailsPage);
   }
 }
