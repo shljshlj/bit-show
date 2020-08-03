@@ -87,6 +87,7 @@ function displaySingleItem(item, headerContainer, gridContainer) {
   const itemLanguage = item.getOriginalLanguageFull();
   const releaseDateFormated = item.getReleaseDateFormat();
   const keywordsList = item.getKeywordsArray();
+  console.log(keywordsList);
 
   const moreInfoPanel = moreInfoPreview(
     itemCountry,
@@ -95,6 +96,8 @@ function displaySingleItem(item, headerContainer, gridContainer) {
     status,
     homepage,
     externalIds,
+    title,
+    media,
     keywordsList
   );
 
