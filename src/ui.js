@@ -5,7 +5,7 @@ import { castPreview } from './components/CastPreview';
 import { seasonsPreview } from './components/SeasonsPreview';
 import { videosPreview } from './components/VideosPreview';
 import { recommendedPreview } from './components/RecommendedPreview';
-import { detailsPreview } from './components/DetailsPreview';
+import { moreInfoPreview } from './components/MoreInfoPreview';
 
 function displayPreview(items, container) {
   items.forEach((item) => {
@@ -81,9 +81,22 @@ function displaySingleItem(item, headerContainer, gridContainer) {
 
   const recommendedPanel = recommendedPreview(recommendedShows);
 
-  /* Details Panel */
+  /* MoreInfo Panel */
 
-  const detailsPanel = detailsPreview();
+  const itemCountry = item.getCountryOfOrigin();
+  const itemLanguage = item.getOriginalLanguageFull();
+  const releaseDateFormated = item.getReleaseDateFormat();
+  const keywordsList = item.getKeywordsArray();
+
+  const moreInfoPanel = moreInfoPreview(
+    itemCountry,
+    itemLanguage,
+    releaseDateFormated,
+    status,
+    homepage,
+    externalIds,
+    keywordsList
+  );
 
 
 
@@ -92,7 +105,7 @@ function displaySingleItem(item, headerContainer, gridContainer) {
   gridContainer.insertAdjacentHTML('beforeend', seasonsPanel);
   gridContainer.insertAdjacentHTML('beforeend', videosPanel);
   gridContainer.insertAdjacentHTML('beforeend', recommendedPanel);
-  gridContainer.insertAdjacentHTML('beforeend', detailsPanel);
+  gridContainer.insertAdjacentHTML('beforeend', moreInfoPanel);
 }
 
 export {

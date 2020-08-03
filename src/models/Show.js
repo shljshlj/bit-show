@@ -4,6 +4,7 @@ import { POSTER_BACKDROP } from '../shared/constants';
 
 import findLanguageName from '../utils/findLanguageName';
 import findCountryName from '../utils/findCountryName';
+import dateFormat from '../utils/dateFormat';
 
 export default class Show {
   constructor(
@@ -84,6 +85,13 @@ export default class Show {
     }
   }
 
+  getReleaseDateFormat() {
+    if (this.firstAirDate) {
+      return dateFormat(this.firstAirDate);
+    }
+    return this.firstAirDate;
+  }
+
   getCreatorsList() {
     let creatorsList = '';
 
@@ -114,7 +122,7 @@ export default class Show {
     return posterSizes[size];
   }
 
-  getOriginalLanguageName() {
+  getOriginalLanguageFull() {
     if (!this.originalLanguage) return null;
     return findLanguageName(this.originalLanguage);
   }
@@ -123,5 +131,9 @@ export default class Show {
     if (this.originCountry.length === 0) return null;
 
     return this.originCountry.map(country => findCountryName(country));
+  }
+
+  getKeywordsArray() {
+    return Array.from(this.keywords, keywordObj => keywordObj.name);
   }
 };

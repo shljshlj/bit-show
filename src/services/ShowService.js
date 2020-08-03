@@ -135,7 +135,7 @@ class ShowService {
     const { data } = await tvApi.get(`/${tvId}/keywords`, options);
     const keywords = data.results;
 
-    return new Keywords(keywords);
+    return keywords;
   }
 
   async fetchRecommended(tvId, page = 1, language = 'en-US') {
