@@ -1,3 +1,5 @@
+import imdbRating from '../utils/imdb';
+
 export const externalLinksPreview = (externalIds, homepage, title, media) => {
   const facebook = externalIds.getExternalUrl('facebook');
   const instagram = externalIds.getExternalUrl('instagram');
@@ -7,7 +9,7 @@ export const externalLinksPreview = (externalIds, homepage, title, media) => {
 
   const facebookLink = facebook ?
     `
-      <li class="links__item">
+      <li class="links__item links--social">
         <a title="Visit Facebook" href=${facebook} target="_blank">
           <span><i class="fab fa-facebook-square"></i></span>
         </a>
@@ -16,7 +18,7 @@ export const externalLinksPreview = (externalIds, homepage, title, media) => {
 
   const twitterLink = twitter ?
     `
-      <li class="links__item">
+      <li class="links__item links--social">
         <a title="Visit Twitter" href=${twitter} target="_blank">
           <span><i class="fab fa-twitter"></i></span>
         </a>
@@ -25,7 +27,7 @@ export const externalLinksPreview = (externalIds, homepage, title, media) => {
 
   const instagramLink = instagram ?
     `
-      <li class="links__item">
+      <li class="links__item links--social">
         <a title="Visit Instagram" href=${instagram} target="_blank">
           <span><i class="fab fa-instagram"></i></span>
         </a>
@@ -54,6 +56,7 @@ export const externalLinksPreview = (externalIds, homepage, title, media) => {
           </a>
         </span>
       </section>
+      <script>${imdbRating(document, 'script', 'imdb-rating-api')}</script>
     ` : '';
 
   const linksPreview =
