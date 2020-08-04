@@ -9,6 +9,7 @@ import Keywords from '../models/Keywords';
 import PreviewPerson from '../models/PreviewPerson';
 import Show from '../models/Show';
 import PreviewSeason from '../models/PreviewSeason';
+import Video from '../models/Video';
 
 class ShowService {
   async fetchPopular(numOfShows = 4, page = 1, language = 'en-US') {
@@ -189,8 +190,11 @@ class ShowService {
       created_by,
     } = details;
 
+    console.log(videos.results);
+
     const creators = created_by.map(creator => creator.name);
     const seasonPreviews = seasons.map(season => new PreviewSeason(season));
+    const videoList = videos.results.length !== 0 ? videos.results.map(video => new Video(video)) : null;
 
     return new Show(
       id,
@@ -211,7 +215,7 @@ class ShowService {
       original_language,
       poster_path,
       backdrop_path,
-      videos,
+      videoList,
       creators,
       castWithEpisodes,
       homepage,

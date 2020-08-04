@@ -1,3 +1,4 @@
+import { POSTER_PATH_S } from '../shared/constants';
 import { POSTER_PATH_M } from '../shared/constants';
 
 export default class PreviewItem {
@@ -21,9 +22,14 @@ export default class PreviewItem {
     this.posterPath = poster_path;
   }
 
-  getPosterUrl() {
+  getPosterUrl(size = 'm') {
     if (!this.posterPath) return null;
-    return `${POSTER_PATH_M}${this.posterPath}`;
+
+    const posterUrl = {
+      s: `${POSTER_PATH_S}${this.posterPath}`,
+      m: `${POSTER_PATH_M}${this.posterPath}`
+    }
+    return posterUrl[size];
   }
 
   getReleaseYear() {

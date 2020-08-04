@@ -3,7 +3,7 @@ import { recommendedCard } from './RecommendedCard';
 export const recommendedPreview = (recommended) => {
   const recommendedList = recommended.map(item => {
     const { title, rating } = item;
-    const posterUrl = item.getPosterUrl();
+    const posterUrl = item.getPosterUrl('s');
     const ratingPercent = rating ? rating * 10 : '';
 
     return recommendedCard(posterUrl, title, ratingPercent);
