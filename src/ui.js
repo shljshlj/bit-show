@@ -6,6 +6,7 @@ import { seasonsPreview } from './components/SeasonsPreview';
 import { videosPreview } from './components/VideosPreview';
 import { recommendedPreview } from './components/RecommendedPreview';
 import { moreInfoPreview } from './components/MoreInfoPreview';
+import { videoModal } from './components/VideoModal';
 
 /* Display preview items on home page */
 
@@ -114,7 +115,16 @@ function displaySingleItem(item, headerContainer, gridContainer) {
   gridContainer.insertAdjacentHTML('beforeend', moreInfoPanel);
 }
 
+function createModal(modalContainer, videoTitle, videoId) {
+  console.log('videoTitle: ', videoTitle);
+  console.log('videoId: ', videoId);
+
+  const modal = videoModal(videoTitle, videoId);
+  modalContainer.insertAdjacentHTML('beforeend', modal);
+}
+
 export {
   displayPreview,
-  displaySingleItem
+  displaySingleItem,
+  createModal
 };

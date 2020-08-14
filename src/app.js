@@ -1,12 +1,14 @@
 import * as data from './data';
 import * as ui from './ui';
+import { setupModal } from './utils/modalFunctions';
 
 // 1. fetch popular movies and shows
 // 2. on success ->
 // 3. display popular movies and shows
 // 4. add event listeners to items(movies and shows)
 
-/* HOME PAGE */
+/////////////////////
+//////* HOME PAGE */
 
 const $moviePopularContainer = document.querySelector(
   '.main__section-grid.movies-popular'
@@ -43,18 +45,41 @@ function handleCardClick(event) {
   console.log(event);
 }
 
-/* DETAILS PAGE */
+
+////////////////////////
+//////* DETAILS PAGE */
 
 const $pageHeader = document.querySelector('.page-header-container');
 const $pageGrid = document.querySelector('.single-page__grid');
+const $modalOverlay = document.querySelector('.modal__overlay');
+
 
 function onSuccessDetailsPage(item) {
   ui.displaySingleItem(item, $pageHeader, $pageGrid);
+
+  const $videoSection = document.querySelector('.video_wrapper');
+  $videoSection.addEventListener('click', handleVideoPreviewClick);
 }
 
-function setupVideoSectionListeners(event) {
+function handleVideoPreviewClick(event) {
+  event.preventDefault();
 
+  if (!event.target.closest('.video__play')) return;
+
+  const elem = event.target.closest('.video__play');
+  const videoId = elem.getAttribute('data-video-id');
+  const videoTitle = elem.getAttribute('data-title');
+
+  createModalOnVideoClick(videoTitle, videoId);
 }
+
+function createModalOnVideoClick(videoTitle, videoId) {
+  const $bodyEl = document.querySelector('body');
+
+  ui.createModal($modalOverlay, videoTitle, videoId);
+  setupModal($bodyEl, $modalOverlay).startModal();
+}
+
 
 export function initDetailsPage() {
   const id = localStorage.getItem('id');

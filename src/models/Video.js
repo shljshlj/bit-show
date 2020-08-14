@@ -1,14 +1,14 @@
 export default class Video {
   constructor({ name, key }) {
     this.title = name;
-    this.ytKey = key;
+    this.videoId = key;
   }
 
   getImgUrl() {
-    return `https://i.ytimg.com/vi/${this.ytKey}/hqdefault.jpg`;
+    return `https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg`;
   }
 
   getVideoUrl() {
-    return `https://www.youtube.com/embed/${this.ytKey}`;
+    return `https://www.youtube.com/embed/${this.videoId}`;
   }
 }
