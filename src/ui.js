@@ -7,12 +7,16 @@ import { videosPreview } from './components/VideosPreview';
 import { recommendedPreview } from './components/RecommendedPreview';
 import { moreInfoPreview } from './components/MoreInfoPreview';
 
+/* Display preview items on home page */
+
 function displayPreview(items, container) {
   items.forEach((item) => {
     const card = cardPreview(item);
     container.insertAdjacentHTML('beforeend', card);
   });
 }
+
+/* Display single page for show item */
 
 function displaySingleItem(item, headerContainer, gridContainer) {
   console.log(item);
@@ -42,7 +46,7 @@ function displaySingleItem(item, headerContainer, gridContainer) {
     recommendedShows
   } = item;
 
-  /* Header */
+  // 01 Header
 
   const itemRuntime = episodeRuntime + 'min';
   const itemGenres = item.getGenreList();
@@ -65,23 +69,23 @@ function displaySingleItem(item, headerContainer, gridContainer) {
     backdropUrl
   );
 
-  /* Cast Panel */
+  // 02 Cast Panel
 
   const castPanel = castPreview(media, cast);
 
-  /* Seasons Panel */
+  // 03 Seasons Panel
 
   const seasonsPanel = seasonsPreview(title, seasons);
 
-  /* Videos Panel */
+  // 04 Videos Panel
 
   const videosPanel = videosPreview(videos);
 
-  /* Recommended Panel */
+  // 05 Recommended Panel
 
   const recommendedPanel = recommendedPreview(recommendedShows);
 
-  /* MoreInfo Panel */
+  // 06 More Info Panel
 
   const itemCountry = item.getCountryOfOrigin();
   const itemLanguage = item.getOriginalLanguageFull();

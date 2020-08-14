@@ -4,7 +4,6 @@ import { POSTER_BACKDROP } from '../shared/constants';
 
 import findLanguageName from '../utils/findLanguageName';
 import findCountryName from '../utils/findCountryName';
-import dateFormat from '../utils/dateFormat';
 
 export default class Show {
   constructor(
@@ -87,7 +86,11 @@ export default class Show {
 
   getReleaseDateFormat() {
     if (this.firstAirDate) {
-      return dateFormat(this.firstAirDate);
+      return new Date(this.firstAirDate).toLocaleDateString("en-GB", {
+        year: "numeric",
+        month: "short",
+        day: "numeric"
+      });
     }
     return this.firstAirDate;
   }

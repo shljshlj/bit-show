@@ -23,10 +23,10 @@ function onSuccessHomePage(movies, shows) {
   ui.displayPreview(movies, $moviePopularContainer);
   ui.displayPreview(shows, $showPopularContainer);
 
-  document.addEventListener('click', setupEventListeners, false);
+  document.addEventListener('click', setupHomePageEventListeners, false);
 }
 
-function setupEventListeners(event) {
+function setupHomePageEventListeners(event) {
   if (!event.target.closest('[data-id]')) return;
 
   const el = event.target.closest('[data-id]');
@@ -50,6 +50,10 @@ const $pageGrid = document.querySelector('.single-page__grid');
 
 function onSuccessDetailsPage(item) {
   ui.displaySingleItem(item, $pageHeader, $pageGrid);
+}
+
+function setupVideoSectionListeners(event) {
+
 }
 
 export function initDetailsPage() {
