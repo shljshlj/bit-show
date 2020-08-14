@@ -5,7 +5,8 @@ export const castPreview = (media, cast) => {
 
   const castCardList = castInOrder.map(person => {
     const profileImgUrl = person.getProfileImgUrl();
-    return castCard(person, profileImgUrl);
+    const genderStr = person.getGenderStr();
+    return castCard(person, profileImgUrl, genderStr);
   });
 
   const castDescription = media === 'tv' ? 'Series Cast Summary:' : 'Top Billed Cast:';

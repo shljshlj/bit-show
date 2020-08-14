@@ -3,7 +3,7 @@ import { showService } from './services/ShowService';
 
 async function getPopularMoviesAndShows(onSuccess) {
   const fetchedMovies = await movieService.fetchPopular();
-  const fetchedShows = await showService.fetchPopular(12);
+  const fetchedShows = await showService.fetchPopular(100);
 
   const popularMovies = await movieService.createMoviePreviews(fetchedMovies);
   const popularShows = await showService.createShowPreviews(fetchedShows);
