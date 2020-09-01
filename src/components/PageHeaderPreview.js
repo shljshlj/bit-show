@@ -8,7 +8,8 @@ export const pageHeaderPreview = (media, title, runtime, genres, dateFormat, vot
 
   const header =
     `
-    <section class="page-header page-header--backdrop_poster">
+    <section class="page-header page-header--backdrop_poster"
+      style="background-image:url('${backdropUrl}')">
       <div class="page-header--linear_gradient">
         <div class="content_wrapper page-header_wrapper">
           <div class="poster_wrapper">

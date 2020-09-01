@@ -116,9 +116,6 @@ function displaySingleItem(item, headerContainer, gridContainer) {
 }
 
 function createModal(modalContainer, videoTitle, videoId) {
-  console.log('videoTitle: ', videoTitle);
-  console.log('videoId: ', videoId);
-
   const modal = videoModal(videoTitle, videoId);
   modalContainer.insertAdjacentHTML('beforeend', modal);
 }
