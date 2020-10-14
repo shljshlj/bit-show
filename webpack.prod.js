@@ -8,7 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = merge(common, {
-  mode: 'development',
+  mode: 'production',
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
@@ -18,17 +18,18 @@ module.exports = merge(common, {
   },
   module: {
     rules: [
-      // {
-      //   test: /\.js$/,
-      //   use: [
-      //     {
-      //       loader: 'babel-loader',
-      //       options: {
-      //         presets: ['es2015']
-      //       }
-      //     }
-      //   ]
-      // },
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules)/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env']
+            }
+          }
+        ]
+      },
       {
         test: /\.scss$/i,
         use: [
