@@ -1,14 +1,23 @@
 .page-header {
-  &--backdrop_poster{
+  &--backdrop_poster {
     color: #fff;
     // background-image: url('https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/jC1KqsFx8ZyqJyQa2Ohi7xgL7XC.jpg');
     background-position: right -200px top;
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
   }
 
   &--linear_gradient {
-    background-image: linear-gradient(to right, rgba(26.27%, 9.41%, 18.43%, 1.00) 150px, rgba(34.12%, 15.69%, 25.49%, 0.84) 100%);
+    background-image: linear-gradient(
+      to right,
+      rgba(26.27%, 9.41%, 18.43%, 1) 150px,
+      rgba(34.12%, 15.69%, 25.49%, 0.84) 100%
+    );
+    // background-image: linear-gradient(
+    //   to right,
+    //   var(--bg-dark) 150px,
+    //   rgba(2, 37, 65, 0.5) 100%
+    // );
     height: 100%;
   }
 
@@ -79,6 +88,5 @@
   h4 {
     display: inline;
     margin-right: 10px;
-    
   }
 }

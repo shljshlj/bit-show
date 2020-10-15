@@ -2,6 +2,7 @@ import { imageConfiguration } from './configuration';
 
 // Api key
 export const API_KEY = process.env.TMDB_API_KEY;
+console.log(API_KEY);
 
 // Endpoints
 export const BASE_API_ENDPOINT = 'https://api.themoviedb.org/3';
