@@ -27,7 +27,8 @@ module.exports = {
   plugins: [
     new Dotenv({
       path: './.env.local',
-      safe: true
+      safe: false,
+      systemvars: true
     })
   ]
 };
