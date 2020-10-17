@@ -1,7 +1,7 @@
 import { imageConfiguration } from './configuration';
 
 // Api key
-export const API_KEY = process.env.TMDB_API_KEY;
+export const API_KEY = process.env.NODE_ENV_TMDB_API_KEY;
 console.log(API_KEY);
 
 // Endpoints
