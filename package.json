@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "main": "index.js",
-  "repository": "https://github.com/shljshlj/bit-shows.git",
+  "repository": "https://github.com/shljshlj/tv-app",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js --open",
     "build": "webpack --config webpack.prod.js"
@@ -36,3 +36,4 @@
     "colorthief": "^2.3.2"
   }
 }
+
