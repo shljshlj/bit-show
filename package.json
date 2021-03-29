@@ -32,7 +32,7 @@
     "last 1 Chrome versions"
   ],
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "colorthief": "^2.3.2"
   },
   "engines": {
