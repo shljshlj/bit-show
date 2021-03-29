@@ -2,7 +2,7 @@
   &__panel {
     grid-area: cast;
   }
-  
+
   &__heading {
     &-label {
       font-size: 0.9em;
@@ -12,7 +12,7 @@
   &-scroller {
     @include fader-vertical;
   }
-  
+
   &__list {
     display: flex;
     overflow-x: auto;
@@ -28,7 +28,7 @@
     overflow: hidden;
     margin: 0px 10px 10px 0px;
 
-    border: 1px solid rgb(227,227,227);
+    border: 1px solid rgb(227, 227, 227);
     border-radius: var(--card-border-radius);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
@@ -49,7 +49,7 @@
         background-size: 150px;
         background-position: bottom;
         background-repeat: no-repeat;
-        background-color: var( --light-grey);
+        background-color: var(--light-grey);
       }
     }
 
@@ -75,6 +75,6 @@
 
   &__episode_count {
     font-size: 0.9em;
-    color: rgba(0, 0, 0, .5);
+    color: rgba(0, 0, 0, 0.5);
   }
 }
